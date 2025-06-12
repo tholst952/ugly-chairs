@@ -1,0 +1,33 @@
+/* Tablets */
+@media (max-width: 1024px) {
+  .home-headline {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .home-introduction {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+
+  .home img {
+    max-width: 400px;
+    min-width: 300px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .home-text {
+    padding: 0;
+  }
+
+  .home img {
+    max-width: 300px;
+    min-width: 300px;
+  }
+}

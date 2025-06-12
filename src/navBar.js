@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 export default function NavBar() {
   return (
     <nav className="nav-bar">
@@ -53,16 +54,16 @@ export default function NavBar() {
       <div style={navListStyle}>
         <ul className="nav-list">
           <li>
-            <a>Our Chairs 🪑</a>
+            <a href="#">Our Chairs 🪑</a>
           </li>
           <li>
-            <a>Our Customers 👩🏽‍🤝‍👩🏽</a>
+            <a href="#">Our Customers 👩🏽‍🤝‍👩🏽</a>
           </li>
           <li>
-            <a>Bestsellers ⭐</a>
+            <a href="#">Bestsellers ⭐</a>
           </li>
           <li>
-            <a>Current Stock 🧐</a>
+            <a href="#">Current Stock 🧐</a>
           </li>
         </ul>
       </div>
