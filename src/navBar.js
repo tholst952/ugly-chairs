@@ -8,23 +8,11 @@ export default function NavBar() {
   );
 
   function Logo() {
-    const logoStyle = {
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-      fontFamily: "Space Grotesk",
-      // fontFamily: "Delius",
-      // fontFamily: "Edu NSW ACT Cursive",
-      fontSize: "26px",
-      fontWeight: "600",
-      color: "#333",
-    };
-
     return (
-      <div style={logoStyle}>
+      <div className="logo">
         <svg
           style={{ transform: "rotate(6deg)" }}
-          fill="#000000"
+          fill="#333"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           width="32px"
