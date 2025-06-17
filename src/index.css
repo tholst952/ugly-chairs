@@ -6,7 +6,6 @@
 /* Fonts Color #333 */
 
 /* Basics */
-
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +42,41 @@ body {
   font-size: 26px;
   font-weight: 600;
   color: #333;
+}
+
+.nav-list-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
+}
+
+.nav-list-modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #dbcdbf;
+  padding: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  pointer-events: auto;
+}
+
+.modal-list {
+  list-style-type: none;
+  font-size: 2.75rem;
+  line-height: 2.5;
+  text-align: center;
 }
 
 .nav-list {

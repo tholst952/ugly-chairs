@@ -1,9 +1,34 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState, useEffect } from "react";
+
 export default function NavBar() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 820);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 820);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav className="nav-bar">
       <Logo />
-      <NavList />
+      {isMobile ? (
+        isModalOpen ? (
+          <>
+            <div
+              className="modal-overlay"
+              onClick={() => setIsModalOpen(false)}
+            />
+            <NavListModal onClose={() => setIsModalOpen(false)} />
+          </>
+        ) : (
+          <NavListBtn onClick={() => setIsModalOpen(true)} />
+        )
+      ) : (
+        <NavList />
+      )}
     </nav>
   );
 
@@ -29,6 +54,35 @@ export default function NavBar() {
         </svg>
 
         <span>Ugly Chairs</span>
+      </div>
+    );
+  }
+
+  function NavListBtn({ onClick }) {
+    return (
+      <button className="nav-list-btn" onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+        </svg>
+      </button>
+    );
+  }
+
+  function NavListModal({ onClose }) {
+    return (
+      <div className="nav-list-modal">
+        <ul className="modal-list">
+          <li>Our Chairs</li>
+          <li>Our Customers</li>
+          <li>Bestsellers</li>
+          <li>Current Stock</li>
+        </ul>
       </div>
     );
   }
