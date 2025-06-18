@@ -167,7 +167,7 @@ body {
 
 .chair-card {
   background-color: #faf9f6;
-  cursor: pointer;
+
   transition: transform 0.3s ease;
   /* transform-origin: center center; */
   transform-origin: top left;
@@ -211,6 +211,7 @@ body {
 
 .bestsellers-section img {
   width: 100%;
+  cursor: pointer;
   /* border-top-left-radius: 8px;
   border-top-right-radius: 8px; */
 }
@@ -228,4 +229,5 @@ body {
   font-size: 16px;
   padding: 9px 27px;
   border-radius: 50px;
+  cursor: pointer;
 }
