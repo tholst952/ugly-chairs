@@ -1,11 +1,16 @@
 @import "./media-queries.css";
 @import url("https://fonts.googleapis.com/css2?family=Delius&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&&family=Space+Grotesk&display=swap");
-
+/**********************************/
 /* Colors Used */
-/* Background Color #DBCDBF */
+/**********************************/
+/* Background Color #DBCDBF #FAF9F6*/
 /* Fonts Color #333 */
+/* Border Color #403124 */
 
+/**********************************/
 /* Basics */
+/**********************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +24,14 @@ html {
 body {
   font-family: "Roboto", "sans-serif";
   background-color: #dbcdbf;
+
   color: #333;
 }
 
+/**********************************/
 /* NavBar Component */
+/**********************************/
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -91,7 +100,9 @@ body {
   color: #333;
 }
 
+/**********************************/
 /* Home Component */
+/**********************************/
 .home {
   margin: 6.4rem;
   display: flex;
@@ -128,6 +139,93 @@ body {
   max-width: 500px;
   height: auto;
   flex-shrink: 1;
-  border: 6px solid #403124;
+  border: 8px solid #403124;
   transition: all 0.3s ease;
+  /* border-radius: 8px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/**********************************/
+/* Bestsellers Component */
+/**********************************/
+
+.bestsellers-headline {
+  font-family: Space Grotesk;
+  font-size: 3rem;
+  margin-left: 5rem;
+  text-decoration-line: underline;
+}
+
+.bestsellers-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  column-gap: 60px;
+  margin-bottom: 80px;
+  padding: 6rem;
+}
+
+.chair-card {
+  background-color: #faf9f6;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* transform-origin: center center; */
+  transform-origin: top left;
+}
+
+.chair-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-contents {
+  padding: 32px;
+  /* border-top: 1px solid black; */
+  /* border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px; */
+}
+
+.card-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.card-list {
+  list-style: none;
+  font-size: 16px;
+  line-height: 2.5;
+  margin-bottom: 18px;
+}
+
+.card-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: #0891b2;
+}
+
+.bestsellers-section img {
+  width: 100%;
+  /* border-top-left-radius: 8px;
+  border-top-right-radius: 8px; */
+}
+
+.chair-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 48px; */
+  font-size: 24px;
+}
+.btn--small {
+  background-color: #0891b2;
+  color: #fff;
+  font-size: 16px;
+  padding: 9px 27px;
+  border-radius: 50px;
 }

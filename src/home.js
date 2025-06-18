@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="home">
+      <section className="home">
         <div className="home-text">
           <h2 className="home-headline">
             We hand-craft ugly chairs for any space.
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
 
         <img src="/img/chair-main.jpg" alt="a brown chair, heavily damaged" />
-      </div>
+      </section>
     </>
   );
 }

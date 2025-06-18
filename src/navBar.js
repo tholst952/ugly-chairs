@@ -78,10 +78,10 @@ export default function NavBar() {
     return (
       <div className="nav-list-modal">
         <ul className="modal-list">
-          <li>Our Chairs</li>
-          <li>Our Customers</li>
           <li>Bestsellers</li>
+          <li>Our Chairs</li>
           <li>Current Stock</li>
+          <li>Our Customers</li>
         </ul>
       </div>
     );
@@ -96,16 +96,16 @@ export default function NavBar() {
       <div style={navListStyle}>
         <ul className="nav-list">
           <li>
+            <a href="#bestsellers">Bestsellers ⭐</a>
+          </li>
+          <li>
             <a href="#">Our Chairs 🪑</a>
           </li>
           <li>
-            <a href="#">Our Customers 👩🏽‍🤝‍👩🏽</a>
-          </li>
-          <li>
-            <a href="#">Bestsellers ⭐</a>
-          </li>
-          <li>
             <a href="#">Current Stock 🧐</a>
+          </li>
+          <li>
+            <a href="#">Our Customers 👩🏽‍🤝‍👩🏽</a>
           </li>
         </ul>
       </div>
