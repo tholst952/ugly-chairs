@@ -10,7 +10,7 @@ export default function App() {
       <div className="main">
         <Home />
         <Bestsellers />
-        {/* <About /> */}
+        <About />
       </div>
     </div>
   );

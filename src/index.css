@@ -179,6 +179,9 @@ body {
   background-color: #333;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  /* box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.7),
+    0 20px 40px -20px rgba(0, 0, 0, 0.7);
 }
 
 .bestsellers-headline {
@@ -194,8 +197,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
-  padding: 6rem;
+  gap: 5.4rem;
+  padding: 6rem 8rem;
 }
 
 .chair-card {
