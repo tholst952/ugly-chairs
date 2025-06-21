@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <>
-      <section className="home">
+    <div className="wrapper">
+      <section className="container-home home" id="home">
         <div className="home-text">
           <h2 className="home-headline">
             We hand-craft ugly chairs for any space.
@@ -16,8 +16,10 @@ export default function Home() {
           </p>
         </div>
 
-        <img src="/img/chair-main.jpg" alt="a brown chair, heavily damaged" />
+        <div className="home-img">
+          <img src="/img/chair-main.jpg" alt="a brown chair, heavily damaged" />
+        </div>
       </section>
-    </>
+    </div>
   );
 }

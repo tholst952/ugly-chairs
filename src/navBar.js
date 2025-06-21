@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 export default function NavBar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 820);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 820);
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -88,24 +88,28 @@ export default function NavBar() {
   }
 
   function NavList() {
-    const navListStyle = {
-      fontSize: "18px",
-    };
-
     return (
-      <div style={navListStyle}>
+      <div>
         <ul className="nav-list">
           <li>
-            <a href="#bestsellers">Bestsellers ⭐</a>
+            <a href="#bestsellers">
+              Bestsellers <i className="ph ph-trophy"></i>
+            </a>
           </li>
           <li>
-            <a href="#">Our Chairs 🪑</a>
+            <a href="#">
+              Our Chairs <i className="ph ph-chair"></i>
+            </a>
           </li>
           <li>
-            <a href="#">Current Stock 🧐</a>
+            <a href="#">
+              Current Stock <i className="ph ph-stack"></i>
+            </a>
           </li>
           <li>
-            <a href="#">Our Customers 👩🏽‍🤝‍👩🏽</a>
+            <a href="#">
+              Our Customers <i className="ph ph-users"></i>
+            </a>
           </li>
         </ul>
       </div>

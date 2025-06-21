@@ -5,11 +5,13 @@ import About from "./about.js";
 
 export default function App() {
   return (
-    <>
+    <div>
       <NavBar />
-      <Home />
-      <Bestsellers />
-      <About />
-    </>
+      <div className="main">
+        <Home />
+        <Bestsellers />
+        {/* <About /> */}
+      </div>
+    </div>
   );
 }

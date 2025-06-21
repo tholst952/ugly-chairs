@@ -1,8 +1,11 @@
 export default function Bestsellers() {
   return (
-    <>
+    <div className="wrapper dkbg">
       <h2 className="bestsellers-headline">BestSellers</h2>
-      <section class="bestsellers-section" id="bestsellers">
+      <section
+        class="container-bestsellers bestsellers-section"
+        id="bestsellers"
+      >
         <div class="chair-card">
           <img
             src="/img/chair-best-01.jpg"
@@ -268,6 +271,6 @@ export default function Bestsellers() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
