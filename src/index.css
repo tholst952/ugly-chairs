@@ -324,10 +324,18 @@ body {
   transition: transform 0.3s ease;
   transform-origin: top left;
   border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.stock-img {
+  width: 100%;
 }
 
 .stock-card img {
   width: 100%;
+
   cursor: pointer;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
