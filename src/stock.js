@@ -1,8 +1,14 @@
 export default function CurrentStock() {
   return (
     <div className="wrapper dkbg">
-      <h2>Current Stock</h2>
+      <h2 className="stock-headline">Current Stock</h2>
       <section className="section-current-stock" id="current-stock">
+        <div>
+          <button className="stock-btn-left">
+            <i class="ph ph-caret-left"></i>
+          </button>
+        </div>
+
         <div className="stock-card">
           <img
             src="/img/stock-00.jpg"
@@ -19,7 +25,7 @@ export default function CurrentStock() {
                 <span>Comfortable for 6 months</span>
               </li>
               <li>
-                <span>Recycled Microfiber</span>
+                <span>Natural polyester</span>
               </li>
               <li>
                 <span>Weighs 41 lbs.</span>
@@ -54,7 +60,7 @@ export default function CurrentStock() {
                 <span>Recycled Microfiber</span>
               </li>
               <li>
-                <span>Weighs 41 lbs.</span>
+                <span>Weighs 60 lbs.</span>
               </li>
             </ul>
 
@@ -77,16 +83,16 @@ export default function CurrentStock() {
             <h4 className="stock-card-title">The Baby Trainer</h4>
             <ul className="stock-card-list">
               <li>
-                <span>Quiet reflection</span>
+                <span>Milk and iPad</span>
               </li>
               <li>
-                <span>Comfortable for 6 months</span>
+                <span>Comfortable for 10 minutes</span>
               </li>
               <li>
-                <span>Recycled Microfiber</span>
+                <span>Nailed together wood</span>
               </li>
               <li>
-                <span>Weighs 41 lbs.</span>
+                <span>Weighs 6 lbs.</span>
               </li>
             </ul>
 
@@ -99,7 +105,13 @@ export default function CurrentStock() {
           </div>
         </div>
 
-        <div className="stock-card">
+        <div>
+          <button className="stock-btn-right">
+            <i class="ph ph-caret-right"></i>
+          </button>
+        </div>
+
+        {/* <div className="stock-card">
           <img
             src="/img/stock-03.jpg"
             alt="a wood back chair frame with no cushion or arms"
@@ -129,7 +141,7 @@ export default function CurrentStock() {
               <btn className="btn--small">Add to cart</btn>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );

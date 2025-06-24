@@ -184,7 +184,8 @@ body {
     0 20px 40px -20px rgba(0, 0, 0, 0.7);
 }
 
-.bestsellers-headline {
+.bestsellers-headline,
+.stock-headline {
   color: #dbcdbf;
   font-family: Space Grotesk;
   /* text-decoration-line: underline; */
@@ -202,6 +203,15 @@ body {
   padding: 6rem 8rem 12rem 8rem;
 }
 
+.stock-btn-left,
+.stock-btn-right {
+  height: 100%;
+  padding: 2rem;
+  background-color: transparent;
+  color: #dbcdbf;
+  cursor: pointer;
+}
+
 .chair-card {
   width: 320px;
   background-color: #faf9f6;
@@ -217,11 +227,11 @@ body {
 }
 
 .card-contents {
-  padding: 32px;
+  padding: 3.2rem;
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 2.2rem;
   margin-bottom: 16px;
 }
 
@@ -321,4 +331,20 @@ body {
   cursor: pointer;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
+}
+
+.stock-card-contents {
+  padding: 32px;
+}
+
+.stock-card-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.stock-card-list {
+  list-style: none;
+  font-size: 16px;
+  line-height: 2.5;
+  margin-bottom: 18px;
 }
