@@ -189,7 +189,7 @@ body {
   font-family: Space Grotesk;
   /* text-decoration-line: underline; */
   font-size: 6rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
   text-align: center;
   /* margin-left: 5rem; */
 }
@@ -271,6 +271,7 @@ body {
 /**********************************/
 .container-our-chairs {
   padding: 4rem 6rem;
+  margin-bottom: 4rem;
 }
 
 .our-chairs-headline {
@@ -278,7 +279,7 @@ body {
   font-family: Space Grotesk;
   /* text-decoration-line: underline; */
   font-size: 6rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
   text-align: center;
   /* margin-left: 5rem; */
 }
@@ -288,9 +289,36 @@ body {
 }
 .our-chairs-subheadline {
   font-size: 2.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .our-chairs-text {
   font-size: 2.4rem;
   font-weight: 300;
+  line-height: 1.5;
+}
+
+/**********************************/
+/* Current Stock Component */
+/**********************************/
+.section-current-stock {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 3rem;
+}
+
+.stock-card {
+  width: 320px;
+  background-color: #faf9f6;
+  transition: transform 0.3s ease;
+  transform-origin: top left;
+  border-radius: 32px;
+}
+
+.stock-card img {
+  width: 100%;
+  cursor: pointer;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }

@@ -2,6 +2,7 @@ import NavBar from "./navBar.js";
 import Home from "./home.js";
 import Bestsellers from "./bestsellers.js";
 import About from "./about.js";
+import CurrentStock from "./stock.js";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Home />
         <Bestsellers />
         <About />
+        <CurrentStock />
       </div>
     </div>
   );

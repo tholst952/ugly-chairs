@@ -97,12 +97,12 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#our-chairs">
               Our Chairs <i className="ph ph-chair"></i>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#current-stock">
               Current Stock <i className="ph ph-stack"></i>
             </a>
           </li>
