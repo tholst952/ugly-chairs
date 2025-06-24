@@ -118,7 +118,7 @@ body {
 /* Home Component */
 /**********************************/
 .container-home {
-  margin: 8rem 0;
+  margin: 8rem 0 12rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -187,10 +187,11 @@ body {
 .bestsellers-headline {
   color: #dbcdbf;
   font-family: Space Grotesk;
-  text-decoration-line: underline;
-  font-size: 3rem;
+  /* text-decoration-line: underline; */
+  font-size: 6rem;
   padding-top: 3rem;
-  margin-left: 5rem;
+  text-align: center;
+  /* margin-left: 5rem; */
 }
 
 .container-bestsellers {
@@ -198,7 +199,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5.4rem;
-  padding: 6rem 8rem;
+  padding: 6rem 8rem 12rem 8rem;
 }
 
 .chair-card {
@@ -263,4 +264,33 @@ body {
   padding: 9px 27px;
   border-radius: 50px;
   cursor: pointer;
+}
+
+/**********************************/
+/* Our Chairs Component */
+/**********************************/
+.container-our-chairs {
+  padding: 4rem 6rem;
+}
+
+.our-chairs-headline {
+  color: #333;
+  font-family: Space Grotesk;
+  /* text-decoration-line: underline; */
+  font-size: 6rem;
+  padding-top: 3rem;
+  text-align: center;
+  /* margin-left: 5rem; */
+}
+
+.our-chairs-fact {
+  padding: 2rem;
+}
+.our-chairs-subheadline {
+  font-size: 2.8rem;
+}
+
+.our-chairs-text {
+  font-size: 2.4rem;
+  font-weight: 300;
 }

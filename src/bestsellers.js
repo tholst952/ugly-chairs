@@ -1,7 +1,9 @@
 export default function Bestsellers() {
   return (
     <div className="wrapper dkbg">
-      <h2 className="bestsellers-headline">BestSellers</h2>
+      <h2 className="bestsellers-headline">
+        Bestsellers <i class="ph ph-smiley-wink"></i>
+      </h2>
       <section
         class="container-bestsellers bestsellers-section"
         id="bestsellers"
