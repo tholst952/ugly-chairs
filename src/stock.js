@@ -18,12 +18,10 @@ export default function CurrentStock() {
     <div className="wrapper dkbg">
       <h2 className="stock-headline">Current Stock</h2>
       <section className="section-current-stock" id="current-stock">
-        <div>
-          <button
-            className="stock-btn-left"
-            onClick={() => handleScroll("left")}
-          >
-            <i class="ph ph-caret-left"></i>
+        <div className="stock-btn stock-btn-left">
+          <button onClick={() => handleScroll("left")}>
+            {/* <i class="ph ph-caret-left"></i> */}
+            <i class="ph ph-caret-double-left"></i>
           </button>
         </div>
 
@@ -40,13 +38,13 @@ export default function CurrentStock() {
               <h4 className="stock-card-title">The Fringe Duchess</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>Quiet Reflection & Sobbing</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for a Lifetime</span>
                 </li>
                 <li>
-                  <span>Natural polyester</span>
+                  <span>All Natural Polyester</span>
                 </li>
                 <li>
                   <span>Weighs 41 lbs.</span>
@@ -55,7 +53,7 @@ export default function CurrentStock() {
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$404</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -74,13 +72,13 @@ export default function CurrentStock() {
               <h4 className="stock-card-title">The Elephant Squatter</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Breakfast & Doom scrolling</span>
+                  <span>Breakfast & Doom Scrolling</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for 6 Months</span>
                 </li>
                 <li>
-                  <span>Recycled Microfiber</span>
+                  <span>Reassembled Macrofibers</span>
                 </li>
                 <li>
                   <span>Weighs 60 lbs.</span>
@@ -89,7 +87,7 @@ export default function CurrentStock() {
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$219</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -111,10 +109,10 @@ export default function CurrentStock() {
                   <span>Milk and iPad</span>
                 </li>
                 <li>
-                  <span>Comfortable for 10 minutes</span>
+                  <span>Comfortable for 5 Minutes</span>
                 </li>
                 <li>
-                  <span>Nailed together wood</span>
+                  <span>Nailed Together Wood</span>
                 </li>
                 <li>
                   <span>Weighs 6 lbs.</span>
@@ -123,7 +121,7 @@ export default function CurrentStock() {
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$99</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -139,25 +137,25 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Fringe Duchess</h4>
+              <h4 className="stock-card-title">The Road King</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>Tattoos & Hair Perms</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for Multiple Days</span>
                 </li>
                 <li>
-                  <span>Natural polyester</span>
+                  <span>100% Egyptian Cotton</span>
                 </li>
                 <li>
-                  <span>Weighs 41 lbs.</span>
+                  <span>Weighs 32 lbs.</span>
                 </li>
               </ul>
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$150</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -173,25 +171,25 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Fringe Duchess</h4>
+              <h4 className="stock-card-title">The Secret BLANK </h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>Journaling & Corn Chips</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for 3 Hours</span>
                 </li>
                 <li>
-                  <span>Natural polyester</span>
+                  <span>Premium Goose Down Stuffing</span>
                 </li>
                 <li>
-                  <span>Weighs 41 lbs.</span>
+                  <span>Weighs 53 lbs.</span>
                 </li>
               </ul>
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$300</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -207,25 +205,25 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Fringe Duchess</h4>
+              <h4 className="stock-card-title">The Crooked Banker</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>Computer & Office Work</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for 20 Minutes</span>
                 </li>
                 <li>
-                  <span>Natural polyester</span>
+                  <span>Wet Notebooks and Metal Bars</span>
                 </li>
                 <li>
-                  <span>Weighs 41 lbs.</span>
+                  <span>Weighs 14 lbs.</span>
                 </li>
               </ul>
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$20</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -241,25 +239,25 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Fringe Duchess</h4>
+              <h4 className="stock-card-title">The Dank Depresser</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>Vomiting & Game Shows</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for 30 Minutes</span>
                 </li>
                 <li>
-                  <span>Natural polyester</span>
+                  <span>Quad-Slat Premium Cardboard</span>
                 </li>
                 <li>
-                  <span>Weighs 41 lbs.</span>
+                  <span>Weighs 20 lbs.</span>
                 </li>
               </ul>
 
               <div className="chair-price">
                 <span>
-                  <strong>$640</strong>
+                  <strong>$80</strong>
                 </span>
                 <btn className="btn--small">Add to cart</btn>
               </div>
@@ -275,13 +273,13 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Fringe Duchess</h4>
+              <h4 className="stock-card-title">The Postman's Polly</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>Quiet reflection</span>
+                  <span>something here</span>
                 </li>
                 <li>
-                  <span>Comfortable for 6 months</span>
+                  <span>Comfortable for 24 Hours</span>
                 </li>
                 <li>
                   <span>Natural polyester</span>
@@ -505,12 +503,9 @@ export default function CurrentStock() {
           </div>
         </div>
 
-        <div>
-          <button
-            className="stock-btn-right"
-            onClick={() => handleScroll("right")}
-          >
-            <i class="ph ph-caret-right"></i>
+        <div className="stock-btn stock-btn-right">
+          <button onClick={() => handleScroll("right")}>
+            <i class="ph ph-caret-double-right"></i>
           </button>
         </div>
       </section>

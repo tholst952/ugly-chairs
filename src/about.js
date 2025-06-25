@@ -9,8 +9,8 @@ export default function About() {
           </h3>
           <p class="our-chairs-text">
             We only use the lowest quality materials. Found in the most exotic
-            locations, and prepared with an exorbitant amount of Febreeze, our
-            chairs are garden-fresh.
+            locations, and prepared with an exorbitant amount of chemical
+            agents, you can be certain all of our chairs are garden-fresh.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function About() {
           <p class="our-chairs-text">
             Scientific studies have sit-tested each chair with thousands of
             participants to ensure spinal and skeletal alignment. If you have a
-            spine, you can sit in our chairs!
+            spine, understand that you fulfill that requirement.
           </p>
         </div>
 
