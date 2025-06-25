@@ -10,7 +10,7 @@ export default function Bestsellers() {
       >
         <div class="chair-card">
           <img
-            src="/img/chair-best-01.jpg"
+            src="/img/best-01.jpg"
             alt="a teal chair, upholstery ripped and frayed"
           />
           <div class="card-contents">
@@ -97,7 +97,7 @@ export default function Bestsellers() {
 
         <div class="chair-card">
           <img
-            src="img/chair-best-02.jpg"
+            src="img/best-02.jpg"
             alt="a heavily distressed leather chair on a beach"
           />
           <div class="card-contents">
@@ -184,7 +184,7 @@ export default function Bestsellers() {
 
         <div class="chair-card">
           <img
-            src="img/chair-best-03.jpg"
+            src="img/best-03.jpg"
             alt="the remains of a broken wooden chair"
           />
           <div class="card-contents">
