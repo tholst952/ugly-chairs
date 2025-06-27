@@ -18,15 +18,6 @@ export default function CurrentStock() {
     <div className="wrapper dkbg">
       <h2 className="stock-headline">Current Stock</h2>
       <section className="section-current-stock" id="current-stock">
-        <div className="stock-btn">
-          <button
-            className="stock-btn-left"
-            onClick={() => handleScroll("left")}
-          >
-            <i className="ph ph-caret-double-left"></i>
-          </button>
-        </div>
-
         <div className="carousel-window" ref={scrollRef}>
           {/* FRINGE DUCHESS */}
           <div className="stock-card">
@@ -1298,6 +1289,16 @@ export default function CurrentStock() {
             </div>
           </div>
         </div>
+      </section>
+      <div className="stock-scroll-btns">
+        <div className="stock-btn">
+          <button
+            className="stock-btn-left"
+            onClick={() => handleScroll("left")}
+          >
+            <i className="ph ph-caret-double-left"></i>
+          </button>
+        </div>
 
         <div className="stock-btn">
           <button
@@ -1307,7 +1308,7 @@ export default function CurrentStock() {
             <i className="ph ph-caret-double-right"></i>
           </button>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
