@@ -6,6 +6,7 @@
 /* Background Color #DBCDBF #FAF9F6*/
 /* Fonts Color #333 */
 /* Border Color #403124 #f7f6f5 */
+/* Icon Stroke Color #769c1f */
 
 /**********************************/
 /* Basics */
@@ -203,15 +204,6 @@ body {
   padding: 6rem 8rem 12rem 8rem;
 }
 
-.stock-btn-left,
-.stock-btn-right {
-  height: 100%;
-  padding: 2rem;
-  background-color: transparent;
-  color: #dbcdbf;
-  cursor: pointer;
-}
-
 .chair-card {
   width: 320px;
   background-color: #faf9f6;
@@ -251,7 +243,7 @@ body {
 .icon {
   width: 24px;
   height: 24px;
-  stroke: #333;
+  stroke: #769c1f;
 }
 
 .bestsellers-section img {
@@ -339,8 +331,6 @@ body {
 .section-current-stock {
   display: flex;
   align-items: center;
-
-  /* gap: 2rem; */
 }
 
 .stock-card {
@@ -355,13 +345,28 @@ body {
   overflow: hidden;
 }
 
-.stock-img {
-  width: 100%;
+.stock-btn {
+  display: flex;
+}
+
+.stock-btn-left {
+  align-items: flex-end;
+}
+
+.stock-btn-left,
+.stock-btn-right {
+  height: 100%;
+  padding: 2rem;
+  background-color: transparent;
+  color: #dbcdbf;
+}
+
+.stock-btn button {
+  cursor: pointer;
 }
 
 .stock-card img {
   width: 100%;
-
   cursor: pointer;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
@@ -381,4 +386,17 @@ body {
   font-size: 16px;
   line-height: 2.5;
   margin-bottom: 18px;
+}
+
+.stock-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stock-card-list .icon {
+  font-size: 2.4rem;
+  /* stroke: #668226; */
+  stroke: #769c1f;
+  /* margin-right: 1rem; */
 }

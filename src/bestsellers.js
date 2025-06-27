@@ -2,20 +2,20 @@ export default function Bestsellers() {
   return (
     <div className="wrapper dkbg">
       <h2 className="bestsellers-headline">
-        Bestsellers <i class="ph ph-smiley-wink"></i>
+        Bestsellers <i className="ph ph-smiley-wink"></i>
       </h2>
       <section
-        class="container-bestsellers bestsellers-section"
+        className="container-bestsellers bestsellers-section"
         id="bestsellers"
       >
-        <div class="chair-card">
+        <div className="chair-card">
           <img
             src="/img/best-01.jpg"
             alt="a teal chair, upholstery ripped and frayed"
           />
-          <div class="card-contents">
-            <h4 class="card-title">The Side-Sitter</h4>
-            <ul class="card-list">
+          <div className="card-contents">
+            <h4 className="card-title">The Side-Sitter</h4>
+            <ul className="card-list">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -40,7 +40,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -58,7 +58,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -75,7 +75,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -86,23 +86,23 @@ export default function Bestsellers() {
                 <span>Weighs 45 lbs.</span>
               </li>
             </ul>
-            <div class="chair-price">
+            <div className="chair-price">
               <span>
                 <strong>$640</strong>
               </span>
-              <btn class="btn--small">Add to cart</btn>
+              <btn className="btn--small">Add to cart</btn>
             </div>
           </div>
         </div>
 
-        <div class="chair-card">
+        <div className="chair-card">
           <img
             src="img/best-02.jpg"
             alt="a heavily distressed leather chair on a beach"
           />
-          <div class="card-contents">
-            <h4 class="card-title">The Grandpa Jer-Jer</h4>
-            <ul class="card-list">
+          <div className="card-contents">
+            <h4 className="card-title">The Grandpa Jer-Jer</h4>
+            <ul className="card-list">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -127,7 +127,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -144,7 +144,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -161,7 +161,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -173,23 +173,23 @@ export default function Bestsellers() {
               </li>
             </ul>
 
-            <div class="chair-price">
+            <div className="chair-price">
               <span>
                 <strong>$520</strong>
               </span>
-              <btn class="btn--small">Add to cart</btn>
+              <btn className="btn--small">Add to cart</btn>
             </div>
           </div>
         </div>
 
-        <div class="chair-card">
+        <div className="chair-card">
           <img
             src="img/best-03.jpg"
             alt="the remains of a broken wooden chair"
           />
-          <div class="card-contents">
-            <h4 class="card-title">The Epic Gamer</h4>
-            <ul class="card-list">
+          <div className="card-contents">
+            <h4 className="card-title">The Epic Gamer</h4>
+            <ul className="card-list">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -214,7 +214,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -231,7 +231,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -253,7 +253,7 @@ export default function Bestsellers() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  className="icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -264,11 +264,11 @@ export default function Bestsellers() {
                 <span>Weighs 9 lbs.</span>
               </li>
             </ul>
-            <div class="chair-price">
+            <div className="chair-price">
               <span>
                 <strong>$300</strong>
               </span>
-              <btn class="btn--small">Add to cart</btn>
+              <btn className="btn--small">Add to cart</btn>
             </div>
           </div>
         </div>
