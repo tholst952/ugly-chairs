@@ -369,7 +369,6 @@ body {
 
 .stock-card-list .icon {
   font-size: 2.4rem;
-  /* stroke: #668226; */
   stroke: #769c1f;
   /* margin-right: 1rem; */
 }
@@ -397,4 +396,11 @@ body {
 
 .stock-btn button {
   cursor: pointer;
+}
+
+/**********************************/
+/* Testimonial Component */
+/**********************************/
+.section-testimonial {
+  padding: 20rem;
 }

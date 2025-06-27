@@ -3,6 +3,7 @@ import Home from "./home.js";
 import Bestsellers from "./bestsellers.js";
 import About from "./about.js";
 import CurrentStock from "./stock.js";
+import Testimonial from "./testimonial.js";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Bestsellers />
         <About />
         <CurrentStock />
+        <Testimonial />
       </div>
     </div>
   );
