@@ -11,7 +11,7 @@ export default function Testimonial() {
               className="customer-img"
             />
             <figcaption className="customer-quote">
-              "This chair was the best mistake I ever bought, and I buy a lot of
+              "This chair is the best mistake I ever bought, and I buy a lot of
               mistakes..."
             </figcaption>
           </figure>
@@ -61,8 +61,8 @@ export default function Testimonial() {
               className="customer-img"
             />
             <figcaption className="customer-quote">
-              I love my ugly chair. It's self-cleaning. The new stains just
-              blend into the old ones like camoflauge.
+              "I love my ugly chair. It's self-cleaning. The new stains just
+              blend into the old ones like camoflauge."
             </figcaption>
           </figure>
 
@@ -73,8 +73,8 @@ export default function Testimonial() {
               className="customer-img"
             />
             <figcaption className="customer-quote">
-              My chair KNOWS that it's weird and it doesn't try to hide it. I'll
-              never part with it.
+              "My chair KNOWS that it's weird and it doesn't try to hide it.
+              Best purchase I've made in a long time"
             </figcaption>
           </figure>
         </div>
