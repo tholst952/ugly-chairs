@@ -107,7 +107,7 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#our-customers">
               Our Customers <i className="ph ph-users"></i>
             </a>
           </li>

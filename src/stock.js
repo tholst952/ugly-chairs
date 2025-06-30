@@ -24,7 +24,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-00.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a pale green armchair, upholstery ripped and frayed, strands wisping off like a spiders web"
               />
             </div>
 
@@ -119,7 +119,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-01.jpg"
-                alt="a silver armchair, upholstery ripped and frayed"
+                alt="a wide grey armchair of velvety texture torn only on the arm rests, sat beside a bus"
               />
             </div>
 
@@ -213,7 +213,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-02.jpg"
-                alt="a wood back chair frame with no cushion or arms"
+                alt="a small wood back chair frame with no cushion or arms"
               />
             </div>
 
@@ -304,15 +304,15 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* ROAD KING  */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-03.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a red patterned armchair stained and burnt in places with a thick piece of foam for a seat featuring graffiti paint"
               />
             </div>
 
-            {/* ROAD KING */}
             <div className="stock-card-contents">
               <h4 className="stock-card-title">The Road King</h4>
               <ul className="stock-card-list">
@@ -409,7 +409,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-04.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a pattern-backed chair with wooden armrests and filthy seat strewn with debris sat under a bush"
               />
             </div>
 
@@ -504,7 +504,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-05.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="an aluminum framed chair, broken and laid on its side in the grass"
               />
             </div>
 
@@ -599,7 +599,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-06.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a short and wide angular grey armchair, made of cardboard but lined with heavily stained and ripped fabric"
               />
             </div>
 
@@ -694,7 +694,7 @@ export default function CurrentStock() {
             <div className="stock-img">
               <img
                 src="/img/stock-07.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="an upholstered armchair of patterned texture and blue color, missing its cushion, ripped and torn bottom"
               />
             </div>
 
@@ -784,17 +784,17 @@ export default function CurrentStock() {
             </div>
           </div>
 
-          {/* VICTRIX */}
+          {/* JOLLY CHUM */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-08.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a large chair made of wood boards and planks"
               />
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Victrix</h4>
+              <h4 className="stock-card-title">The Jolly Chum</h4>
               <ul className="stock-card-list">
                 <li>
                   <svg
@@ -812,7 +812,7 @@ export default function CurrentStock() {
                     />
                   </svg>
 
-                  <span>Lifesaving & Whistling</span>
+                  <span>Lifesaving & Sunbathing</span>
                 </li>
                 <li>
                   <svg
@@ -830,7 +830,7 @@ export default function CurrentStock() {
                     />
                   </svg>
 
-                  <span>Comfortable for Warm Days</span>
+                  <span>Comfortable for Hot Days</span>
                 </li>
                 <li>
                   <svg
@@ -879,28 +879,89 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* BREAD WINNER */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-09.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a green wooden chair with destroyed wicker seat"
               />
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">Something Here</h4>
+              <h4 className="stock-card-title">The Bread Winner</h4>
               <ul className="stock-card-list">
                 <li>
-                  <span>something here</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="icon"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+                    />
+                  </svg>
+
+                  <span>Working Hard & Eating Bread</span>
                 </li>
                 <li>
-                  <span>Comfortable for a time</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="icon"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+
+                  <span>Comfortable for 8 Hours</span>
                 </li>
                 <li>
-                  <span>something here</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="icon"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+
+                  <span>Poorly Woven Wicker</span>
                 </li>
                 <li>
-                  <span>something here</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="icon"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+
+                  <span>Weighs Almost Nothing</span>
                 </li>
               </ul>
 
@@ -913,11 +974,12 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* SHOCK RIDER */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-10.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a torn up bicycle seat with spring shocks and rusted metal"
               />
             </div>
 
@@ -1007,11 +1069,12 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* VERTIGO CURE */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-11.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a dining chair laying on the ground sideways, missing one leg"
               />
             </div>
 
@@ -1101,16 +1164,17 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* SLANTED TROTTER */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-12.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a padded chair with bent metal frame"
               />
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Tickled Trotter</h4>
+              <h4 className="stock-card-title">The Slanted Trotter</h4>
               <ul className="stock-card-list">
                 <li>
                   <svg
@@ -1195,11 +1259,12 @@ export default function CurrentStock() {
             </div>
           </div>
 
+          {/* BIG CHEESE */}
           <div className="stock-card">
             <div className="stock-img">
               <img
                 src="/img/stock-13.jpg"
-                alt="a pale green armchair, upholstery ripped and frayed"
+                alt="a torn armchair with exposed foam padding"
               />
             </div>
 
