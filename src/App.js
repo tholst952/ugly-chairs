@@ -8,12 +8,15 @@ import Testimonial from "./testimonial.js";
 import Footer from "./footer.js";
 
 export default function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
     <div>
       <NavBar />
       <div className="main">
         <Home />
-        <Bestsellers />
+        <Bestsellers cartItems={cartItems} setCartItems={setCartItems} />
         <About />
         <CurrentStock />
         <Testimonial />

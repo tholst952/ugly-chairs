@@ -1,4 +1,4 @@
-export default function Bestsellers() {
+export default function Bestsellers({ cartItems, setCartItems }) {
   return (
     <div className="wrapper dkbg">
       <h2 className="bestsellers-headline">
@@ -93,7 +93,12 @@ export default function Bestsellers() {
               <span>
                 <strong>$640</strong>
               </span>
-              <btn className="btn--small">Add to cart</btn>
+              <button
+                className="btn--small"
+                onClick={() => setCartItems("test")}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         </div>
@@ -184,7 +189,7 @@ export default function Bestsellers() {
               <span>
                 <strong>$520</strong>
               </span>
-              <btn className="btn--small">Add to cart</btn>
+              <button className="btn--small">Add to cart</button>
             </div>
           </div>
         </div>
@@ -279,7 +284,7 @@ export default function Bestsellers() {
               <span>
                 <strong>$300</strong>
               </span>
-              <btn className="btn--small">Add to cart</btn>
+              <button className="btn--small">Add to cart</button>
             </div>
           </div>
         </div>

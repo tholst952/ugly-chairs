@@ -87,7 +87,7 @@ export default function NavBar() {
     );
   }
 
-  function NavList() {
+  function NavList({}) {
     return (
       <div>
         <ul className="nav-list">

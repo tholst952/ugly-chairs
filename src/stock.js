@@ -111,7 +111,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$404</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -206,11 +206,12 @@ export default function CurrentStock() {
                 <span>
                   <strong>$355</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
 
+          {/* BABY TRAINER */}
           <div className="stock-card">
             <div className="stock-img">
               <img
@@ -219,7 +220,6 @@ export default function CurrentStock() {
               />
             </div>
 
-            {/* BABY TRAINER */}
             <div className="stock-card-contents">
               <h4 className="stock-card-title">The Baby Trainer</h4>
               <ul className="stock-card-list">
@@ -301,7 +301,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$99</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -401,7 +401,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$219</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -496,7 +496,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$179</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -591,7 +591,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$19</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -686,7 +686,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$110</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -781,12 +781,12 @@ export default function CurrentStock() {
                 <span>
                   <strong>$449</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
 
-          {/* JOLLY CHUM */}
+          {/* CHICKEN GRINDER */}
           <div className="stock-card">
             <div className="stock-img">
               <img
@@ -796,7 +796,7 @@ export default function CurrentStock() {
             </div>
 
             <div className="stock-card-contents">
-              <h4 className="stock-card-title">The Jolly Chum</h4>
+              <h4 className="stock-card-title">The Chicken Grinder</h4>
               <ul className="stock-card-list">
                 <li>
                   <svg
@@ -876,7 +876,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$380</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -971,7 +971,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$39</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -1066,7 +1066,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$45</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -1161,7 +1161,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$99</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -1256,7 +1256,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$150</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
@@ -1351,7 +1351,7 @@ export default function CurrentStock() {
                 <span>
                   <strong>$500</strong>
                 </span>
-                <btn className="btn--small">Add to cart</btn>
+                <button className="btn--small">Add to cart</button>
               </div>
             </div>
           </div>
