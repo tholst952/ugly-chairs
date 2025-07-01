@@ -1,4 +1,12 @@
-export default function Bestsellers({ cartItems, setCartItems }) {
+import { useState } from "react";
+
+export default function Bestsellers({}) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  function handleCardImgClick(imageSrc) {
+    setSelectedImage(imageSrc);
+  }
+
   return (
     <div className="wrapper dkbg">
       <h2 className="bestsellers-headline">
@@ -12,6 +20,7 @@ export default function Bestsellers({ cartItems, setCartItems }) {
           <img
             src="/img/best-01.jpg"
             alt="a teal chair, upholstery ripped and frayed"
+            onClick={() => handleCardImgClick("/img/best-01.jpg")}
           />
           <div className="card-contents">
             <h4 className="card-title">The Side-Sitter</h4>
@@ -93,12 +102,7 @@ export default function Bestsellers({ cartItems, setCartItems }) {
               <span>
                 <strong>$640</strong>
               </span>
-              <button
-                className="btn--small"
-                onClick={() => setCartItems("test")}
-              >
-                Add to cart
-              </button>
+              <button className="btn--small">Add to cart</button>
             </div>
           </div>
         </div>
@@ -107,6 +111,7 @@ export default function Bestsellers({ cartItems, setCartItems }) {
           <img
             src="img/best-02.jpg"
             alt="a heavily distressed leather chair on a beach"
+            onClick={() => handleCardImgClick("img/best-02.jpg")}
           />
           <div className="card-contents">
             <h4 className="card-title">The Grandpa Jer-Jer</h4>
@@ -198,6 +203,7 @@ export default function Bestsellers({ cartItems, setCartItems }) {
           <img
             src="img/best-03.jpg"
             alt="the remains of a broken wooden chair"
+            onClick={() => handleCardImgClick("img/best-03.jpg")}
           />
           <div className="card-contents">
             <h4 className="card-title">The Epic Gamer</h4>
@@ -289,6 +295,17 @@ export default function Bestsellers({ cartItems, setCartItems }) {
           </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+          <img
+            src={selectedImage}
+            alt="chair enlarged"
+            className="modal-image"
+            onClick={(e) => e.stopPropagation}
+          />
+        </div>
+      )}
     </div>
   );
 }

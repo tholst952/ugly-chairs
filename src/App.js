@@ -16,7 +16,7 @@ export default function App() {
       <NavBar />
       <div className="main">
         <Home />
-        <Bestsellers cartItems={cartItems} setCartItems={setCartItems} />
+        <Bestsellers />
         <About />
         <CurrentStock />
         <Testimonial />
