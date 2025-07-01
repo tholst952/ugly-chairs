@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="wrapper">
       <h2 className="our-chairs-headline">Our Chairs</h2>
-      <div className="container-our-chairs">
+      <section className="section-our-chairs" id="our-chairs ">
         <div className="our-chairs-fact">
           <h3 class="our-chairs-subheadline">
             <i class="ph ph-arrow-bend-down-right"></i> Ethical and sustainable
@@ -39,7 +39,7 @@ export default function About() {
             contract, and that's an assurance we can promise!
           </p>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

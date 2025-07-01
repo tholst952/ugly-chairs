@@ -7,6 +7,7 @@
 /* Fonts Color #333 */
 /* Border Color #403124 #f7f6f5 */
 /* Icon Stroke Color #769c1f */
+/* Testimonials #c3cc9c#b3cecd#8e9abe#d3d4ea#caa1ba#c4d5d8 */
 
 /**********************************/
 /* Basics */
@@ -99,9 +100,35 @@ body {
 .nav-list {
   list-style-type: none;
   display: flex;
+  align-items: center;
   gap: 2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   /* text-align: center; */
+}
+
+.nav-list li a {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-list button {
+  cursor: pointer;
+  background: #769c1f;
+  color: #333;
+  border-radius: 22px;
+  padding: 0.2rem 2.4rem;
+  outline: none;
+  border: none;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .nav-list a {
@@ -118,7 +145,7 @@ body {
 /**********************************/
 /* Home Component */
 /**********************************/
-.container-home {
+.section-home {
   margin: 8rem 0 12rem 0;
   display: flex;
   flex-direction: row;
@@ -161,7 +188,8 @@ body {
 .home-img {
   flex: 1;
   max-width: 500px;
-  border: 8px solid #f7f6f5;
+  /* border: 8px solid #f7f6f5; */
+  border: 8px solid #333;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
   overflow: hidden;
@@ -180,7 +208,6 @@ body {
   background-color: #333;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  /* box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.3); */
   box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.7),
     0 20px 40px -20px rgba(0, 0, 0, 0.7);
 }
@@ -189,11 +216,9 @@ body {
 .stock-headline {
   color: #dbcdbf;
   font-family: Space Grotesk;
-  /* text-decoration-line: underline; */
   font-size: 6rem;
   padding-top: 4rem;
   text-align: center;
-  /* margin-left: 5rem; */
 }
 
 .container-bestsellers {
@@ -205,21 +230,21 @@ body {
 }
 
 .chair-card {
-  width: 320px;
+  /* width: 320px; */
+  width: 300px;
   background-color: #faf9f6;
   transition: transform 0.3s ease;
-  /* transform-origin: center center; */
   transform-origin: top left;
   border-radius: 32px;
 }
 
 .chair-card:hover {
   transform: scale(1.03);
-  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); */
 }
 
 .card-contents {
-  padding: 3.2rem;
+  /* padding: 3.2rem; */
+  padding: 2.2rem;
 }
 
 .card-title {
@@ -271,7 +296,7 @@ body {
 /**********************************/
 /* Our Chairs Component */
 /**********************************/
-.container-our-chairs {
+.section-our-chairs {
   padding: 4rem 6rem;
   margin-bottom: 4rem;
 }
@@ -303,7 +328,6 @@ body {
 /**********************************/
 /* Current Stock Component */
 /**********************************/
-
 .carousel-window {
   display: flex;
   gap: 4rem;
@@ -312,7 +336,8 @@ body {
   overflow-x: scroll;
   scroll-behavior: smooth;
   width: 100%;
-  max-width: 1100px;
+  /* max-width: 1100px; */
+  max-width: 1020px;
   scrollbar-width: none;
   margin: 0 auto;
 }
@@ -327,7 +352,8 @@ body {
 }
 
 .stock-card {
-  width: 320px;
+  /* width: 320px; */
+  width: 300px;
   background-color: #faf9f6;
   transition: transform 0.3s ease;
   transform-origin: top left;
@@ -346,17 +372,20 @@ body {
 }
 
 .stock-card-contents {
-  padding: 32px;
+  /* padding: 32px; */
+  padding: 2.2rem;
 }
 
 .stock-card-title {
   font-size: 2.2rem;
   margin-bottom: 1.6rem;
+  /* margin-bottom: 1.4rem; */
 }
 
 .stock-card-list {
   list-style: none;
   font-size: 16px;
+  /* font-size: 14px; */
   line-height: 2.5;
   margin-bottom: 18px;
 }
@@ -492,4 +521,11 @@ body {
 
 .customer-quote-6 {
   background-color: #c4d5d8;
+}
+
+/**********************************/
+/* Footer Component */
+/**********************************/
+.footer {
+  padding: 8rem;
 }

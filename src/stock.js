@@ -6,10 +6,12 @@ export default function CurrentStock() {
   function handleScroll(direction) {
     const container = scrollRef.current;
     const card = container.querySelector(".stock-card");
-    const cardWidth = card.offsetWidth + 40;
+    const cardWidth = card.offsetWidth;
+    const gap = 40;
+    const scrollAmount = (cardWidth + gap) * 3;
 
     container.scrollBy({
-      left: direction === "left" ? -cardWidth * 3 : cardWidth * 3,
+      left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   }

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="wrapper">
-      <section className="container-home home" id="home">
+      <section className="section-home home" id="home">
         <div className="home-text">
           <h2 className="home-headline">
             We hand-craft ugly chairs for any space.
