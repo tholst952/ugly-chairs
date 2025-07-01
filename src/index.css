@@ -420,7 +420,6 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 4rem 0;
-  /* border-bottom: 2px solid #333; */
 }
 
 .testimonial:nth-child(even) {
@@ -464,11 +463,11 @@ body {
 }
 
 .customer-img-3 {
-  border: 4px solid #7b87ac;
+  border: 4px solid #8e9abe;
 }
 
 .customer-quote-3 {
-  background-color: #7b87ac;
+  background-color: #8e9abe;
 }
 
 .customer-img-4 {

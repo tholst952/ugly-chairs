@@ -64,4 +64,28 @@
     /* max-width: 300px;
     min-width: 300px; */
   }
+
+  .section-testimonial {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .testimonial:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .customer-group-2 .testimonial:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .customer-group-2 .testimonial:nth-child(even) {
+    flex-direction: row;
+  }
 }

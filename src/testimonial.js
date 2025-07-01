@@ -3,7 +3,7 @@ export default function Testimonial() {
     <div className="wrapper">
       <h2 className="our-customers-headline">Our Customers</h2>
       <section className="section-testimonial" id="our-customers">
-        <div className="customers customer-group1">
+        <div className="customers customer-group-1">
           <figure className="testimonial">
             <img
               src="./img/customer-01.jpg"
@@ -41,7 +41,7 @@ export default function Testimonial() {
           </figure>
         </div>
 
-        <div className="customers customer-group2">
+        <div className="customers customer-group-2">
           <figure className="testimonial testimonial-4">
             <img
               src="./img/customer-04.jpg"
