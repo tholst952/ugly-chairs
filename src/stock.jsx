@@ -719,7 +719,7 @@ export default function CurrentStock() {
                     />
                   </svg>
 
-                  <span>Luncheon & Jigsaws </span>
+                  <span>Luncheon & Jigsaws</span>
                 </li>
                 <li>
                   <svg
