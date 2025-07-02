@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Bestsellers({}) {
+export default function Bestsellers() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   function handleCardImgClick(imageSrc) {
