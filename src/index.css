@@ -114,6 +114,7 @@ body {
 .nav-icon {
   width: 24px;
   height: 24px;
+  stroke: #769c1f;
 }
 
 .nav-list button {
@@ -151,13 +152,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* gap: 8rem; */
-  gap: clamp(2.4rem, 6.5vw, 8rem);
+  gap: 4.5rem;
+  /* gap: clamp(2.4rem, 6.5vw, 8rem); */
   padding: 2rem;
 }
 
 .home-text {
-  padding: 1.2rem;
+  /* padding: 1.2rem; */
+  padding: 2rem;
   /* width: 100%; */
   max-width: 600px;
   flex: 1;

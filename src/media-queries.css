@@ -1,131 +1,110 @@
-/* Tablets */
-@media (max-width: 1024px) {
+/* /////////////////////////////// */
+/* XTRA SMALL 📱 - UNDER 480px */
+/* /////////////////////////////// */
+@media (min-width: 479px) {
   body {
-    background-color: #ffc400;
+    background-color: #f0cdb9;
   }
 
-  /* NAVBAR */
-  .nav-list li {
-    font-size: 2rem;
-  }
-
-  .nav-icon {
-    display: none;
-  }
-
-  /* HOME */
-  .container-home {
-    /* flex-direction: column; */
-    gap: 4rem;
-  }
-
-  .home-headline {
-    font-size: 4rem;
-    line-height: 4rem;
-    letter-spacing: -1.8px;
-  }
-
-  .home-introduction {
-    font-size: 2.7rem;
-    line-height: 2.6rem;
-    min-width: 480px;
-  }
-
-  .home-img {
-    max-width: 450px;
-    min-width: 350px;
-  }
-
-  /* BESTSELLERS */
-  .card-contents {
-    padding: 2.4rem;
-  }
-
-  .card-title {
-    font-size: 2rem;
-  }
-
-  .card-list {
-    font-size: 1.4rem;
-  }
-
-  .chair-price {
-    font-size: 2.2rem;
-  }
-
-  .btn--small {
-    font-size: 1.4rem;
-  }
-}
-
-/* Phones */
-@media (max-width: 768px) {
-  body {
-    background-color: #769c1f;
-  }
-
-  .nav-list {
-    display: none;
-  }
-
-  /* HOME */
-  .home {
+  /* Home Section */
+  .section-home {
     flex-direction: column;
-    gap: 4rem;
   }
 
   .home-text {
     padding: 0;
   }
 
+  .home-headline {
+    font-size: 4.6rem;
+    letter-spacing: -1.9px;
+    line-height: 1;
+  }
+
   .home-introduction {
-    min-width: 350px;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* /////////////////////////////// */
+/* SMALL - 📟 UNDER 768px */
+/* /////////////////////////////// */
+@media (min-width: 767px) {
+  body {
+    background-color: #ae9bff;
   }
 
-  .home img {
-    width: 100%;
-    overflow: hidden;
-    /* max-width: 300px;
-    min-width: 300px; */
+  /* Home Section */
+  .home-headline {
+    font-size: 5.2rem;
   }
 
-  /* BESTSELLERS */
-  .container-bestsellers {
-    flex-direction: column;
-    gap: 3rem;
+  .home-text {
+    padding: 2.4rem;
   }
 
-  .chair-card:hover {
-    transform: none;
+  .home-introduction {
+    font-size: 3.6rem;
+    line-height: 1.1;
   }
 
-  /* CURRENT STOCK */
-  .carousel-window {
-    max-width: 360px;
+  .posh-tag {
+    font-size: 2.4rem;
+  }
+}
+
+/* /////////////////////////////// */
+/* MEDIUM - 💻 UNDER 1024px */
+/* /////////////////////////////// */
+@media (min-width: 1023px) {
+  body {
+    background-color: #99ecda;
   }
 
-  /* TESTIMONIAL */
-  .section-testimonial {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .testimonial {
-    display: flex;
+  .section-home {
     flex-direction: row;
-    align-items: center;
-    text-align: left;
+    gap: 4.5rem;
   }
 
-  .testimonial:nth-child(even) {
-    flex-direction: row-reverse;
+  .home-text {
+    padding: 2rem;
   }
 
-  .customer-group-2 .testimonial:nth-child(odd) {
-    flex-direction: row-reverse;
+  .home-headline {
+    font-size: 6rem;
   }
 
-  .customer-group-2 .testimonial:nth-child(even) {
-    flex-direction: row;
+  .home-introduction {
+    font-size: 3rem;
+  }
+
+  .posh-tag {
+    font-size: 2.6rem;
+  }
+}
+
+/* /////////////////////////////// */
+/* LARGE - 🧮 UNDER 1200px */
+/* /////////////////////////////// */
+@media (min-width: 1199px) {
+  body {
+    background-color: #dbcdbf;
+  }
+
+  .section-home {
+    gap: 6rem;
+  }
+
+  .home-text {
+    padding: 2.5rem;
+  }
+
+  .home-headline {
+    font-size: 6.4rem;
+  }
+
+  .home-introduction {
+    font-size: 3.6rem;
   }
 }
