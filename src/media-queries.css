@@ -9,7 +9,7 @@
   /* Home Section */
   .section-home {
     flex-direction: column;
-    gap: 0;
+    gap: 2rem;
   }
 
   .home-text {

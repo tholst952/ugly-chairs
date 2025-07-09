@@ -8,6 +8,7 @@
 /* Border Color #403124 #f7f6f5 */
 /* Icon Stroke Color #769c1f */
 /* Testimonials #c3cc9c#b3cecd#8e9abe#d3d4ea#caa1ba#c4d5d8 */
+/* Query Colors Used For Testing #99ecda */
 
 /**********************************/
 /* Basics */
@@ -147,13 +148,12 @@ body {
 /* Home Component */
 /**********************************/
 .section-home {
-  margin: 8rem 0 12rem 0;
+  /* margin: 8rem 0 12rem 0;  keep or remove? */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 4.5rem;
-  /* gap: clamp(2.4rem, 6.5vw, 8rem); */
   padding: 2rem;
 }
 
