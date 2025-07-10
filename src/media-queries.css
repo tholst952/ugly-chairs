@@ -1,7 +1,125 @@
 /* /////////////////////////////// */
+/* LARGE - 🧮 UNDER 1200px */
+/* /////////////////////////////// */
+@media (max-width: 1199px) {
+  body {
+    background-color: #dbcdbf;
+  }
+
+  /* Home Section */
+  .section-home {
+    gap: 6rem;
+  }
+
+  .home-text {
+    padding: 2.5rem;
+  }
+
+  .home-headline {
+    font-size: 5.4rem;
+  }
+
+  .home-introduction {
+    font-size: 3.4rem;
+  }
+
+  /* Bestsellers Section */
+  .section-bestsellers {
+    flex-direction: row;
+  }
+}
+
+/* /////////////////////////////// */
+/* MEDIUM - 💻 UNDER 1024px */
+/* /////////////////////////////// */
+@media (max-width: 1023px) {
+  body {
+    background-color: #99ecda;
+  }
+
+  .section-home {
+    flex-direction: row;
+    gap: 4.5rem;
+  }
+
+  .home-text {
+    padding: 2rem;
+  }
+
+  .home-headline {
+    font-size: 5rem;
+  }
+
+  .home-introduction {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .posh-tag {
+    font-size: 2.6rem;
+  }
+
+  /* Bestsellers Section */
+  .section-bestsellers {
+    flex-direction: row;
+  }
+}
+
+/* /////////////////////////////// */
+/* SMALL - 📟 UNDER 768px */
+/* /////////////////////////////// */
+@media (max-width: 767px) {
+  body {
+    background-color: #ae9bff;
+  }
+
+  /* Home Section */
+  .section-home {
+    flex-direction: row;
+  }
+
+  .home-headline {
+    font-size: 4.4rem;
+  }
+
+  .home-text {
+    padding: 2.4rem;
+  }
+
+  .home-introduction {
+    font-size: 2.7rem;
+    line-height: 1.4;
+  }
+
+  .posh-tag {
+    font-size: 2.4rem;
+  }
+
+  /* Bestsellers Section */
+  .bestseller-track {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* padding: 0 1.5rem; */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chair-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* /////////////////////////////// */
 /* XTRA SMALL 📱 - UNDER 480px */
 /* /////////////////////////////// */
-@media (min-width: 479px) {
+@media (max-width: 479px) {
   body {
     background-color: #f0cdb9;
   }
@@ -26,91 +144,9 @@
     font-size: 2.4rem;
     line-height: 3.5rem;
   }
-}
 
-/* /////////////////////////////// */
-/* SMALL - 📟 UNDER 768px */
-/* /////////////////////////////// */
-@media (min-width: 767px) {
-  body {
-    background-color: #ae9bff;
-  }
-
-  /* Home Section */
-  .section-home {
-    flex-direction: row;
-  }
-
-  .home-headline {
-    font-size: 4.6rem;
-  }
-
-  .home-text {
-    padding: 2.4rem;
-  }
-
-  .home-introduction {
-    font-size: 2.7rem;
-    line-height: 1.4;
-  }
-
-  .posh-tag {
-    font-size: 2.4rem;
-  }
-}
-
-/* /////////////////////////////// */
-/* MEDIUM - 💻 UNDER 1024px */
-/* /////////////////////////////// */
-@media (min-width: 1023px) {
-  body {
-    background-color: #99ecda;
-  }
-
-  .section-home {
-    flex-direction: row;
-    gap: 4.5rem;
-  }
-
-  .home-text {
-    padding: 2rem;
-  }
-
-  .home-headline {
-    font-size: 6rem;
-  }
-
-  .home-introduction {
-    font-size: 3rem;
-    line-height: 1.2;
-  }
-
-  .posh-tag {
-    font-size: 2.6rem;
-  }
-}
-
-/* /////////////////////////////// */
-/* LARGE - 🧮 UNDER 1200px */
-/* /////////////////////////////// */
-@media (min-width: 1199px) {
-  body {
-    background-color: #dbcdbf;
-  }
-
-  .section-home {
-    gap: 6rem;
-  }
-
-  .home-text {
-    padding: 2.5rem;
-  }
-
-  .home-headline {
-    font-size: 6.4rem;
-  }
-
-  .home-introduction {
-    font-size: 3.6rem;
-  }
+  /* Bestsellers Section */
+  /* .section-bestsellers {
+    flex-direction: column;
+  } */
 }

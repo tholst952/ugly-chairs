@@ -115,7 +115,7 @@ body {
 .nav-icon {
   width: 24px;
   height: 24px;
-  stroke: #769c1f;
+  /* stroke: #dbcdbf; */
 }
 
 .nav-list button {
@@ -149,6 +149,7 @@ body {
 /**********************************/
 .section-home {
   /* margin: 8rem 0 12rem 0;  keep or remove? */
+  margin: 3rem 0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -223,17 +224,26 @@ body {
   text-align: center;
 }
 
-.container-bestsellers {
+.section-bestsellers {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 4rem;
   padding: 6rem 8rem 12rem 8rem;
 }
 
+.section-bestsellers img {
+  width: 100%;
+  cursor: pointer;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+
 .chair-card {
-  /* width: 320px; */
   width: 300px;
+  flex: 0 0 auto;
+  /* width: 33.33%; */
   background-color: #faf9f6;
   transition: transform 0.3s ease;
   transform-origin: top left;
@@ -245,8 +255,6 @@ body {
 }
 
 .card-contents {
-  /* padding: 3.2rem; */
-  /* padding: 2.2rem; */
   padding: 2.2rem 2.2rem 4rem 2.2rem;
 }
 
@@ -274,13 +282,6 @@ body {
   stroke: #769c1f;
 }
 
-.bestsellers-section img {
-  width: 100%;
-  cursor: pointer;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-}
-
 .chair-price {
   display: flex;
   align-items: center;
@@ -296,6 +297,13 @@ body {
   border-radius: 50px;
   cursor: pointer;
   border: none;
+}
+
+/* Bestseller Carousel for Mobile Widths */
+.bestseller-track {
+  display: flex;
+  /* gap: 2rem; */
+  overflow-x: visible;
 }
 
 /* Modal Overlay Styles for Fullsize Image Display */

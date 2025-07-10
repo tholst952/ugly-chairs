@@ -1,13 +1,43 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { bestsellers } from "./bestsellers-data.js";
 
 // The Actual Component
 export default function BestsellersV2() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const trackRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
   function handleCardImgClick(imageSrc) {
     setSelectedImage(imageSrc);
   }
+
+  function scrollLeft() {
+    console.log("scrolling left, newb!!");
+    if (trackRef.current) {
+      trackRef.current.scrollBy({
+        left: -trackRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  function scrollRight() {
+    if (trackRef.current) {
+      trackRef.current.scrollBy({
+        left: trackRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="wrapper dkbg">
@@ -15,9 +45,21 @@ export default function BestsellersV2() {
         Bestsellers <i className="ph ph-smiley-wink"></i>
       </h2>
 
+      {isMobile && (
+        <div className="carousel-controls">
+          <button className="carousel-btn" onClick={scrollLeft}>
+            L
+          </button>
+          <button className="carousel-btn" onClick={scrollRight}>
+            R
+          </button>
+        </div>
+      )}
+
       <section
-        className="container-bestsellers bestsellers-section"
+        className="section-bestsellers bestseller-track"
         id="bestsellers"
+        ref={trackRef}
       >
         {bestsellers.map((chair) => (
           <div className="chair-card" key={chair.id}>
