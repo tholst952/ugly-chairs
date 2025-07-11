@@ -9,6 +9,7 @@
   /* Home Section */
   .section-home {
     gap: 6rem;
+    padding: 2rem 2rem 6rem 2rem;
   }
 
   .home-text {
@@ -26,6 +27,16 @@
   /* Bestsellers Section */
   .section-bestsellers {
     flex-direction: row;
+  }
+
+  .slider-track {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .slider-dots {
+    display: none;
   }
 }
 
@@ -63,6 +74,10 @@
   .section-bestsellers {
     flex-direction: row;
   }
+
+  .slider-dots {
+    display: none;
+  }
 }
 
 /* /////////////////////////////// */
@@ -96,23 +111,60 @@
   }
 
   /* Bestsellers Section */
-  .bestseller-track {
-    display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    /* padding: 0 1.5rem; */
-    -webkit-overflow-scrolling: touch;
+  .section-bestsellers {
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    /* padding: 2rem; */
+    gap: 2rem;
   }
 
-  .chair-card {
-    flex: 0 0 85%;
-    scroll-snap-align: center;
+  .slider-track {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .carousel-controls {
+  .slider-dots {
     display: flex;
-    justify-content: center;
+    gap: 2rem;
+  }
+
+  .slider-dots button {
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    padding: 1rem;
+    background-color: #f0cdb9;
+  }
+
+  .slider-dots .dot.active {
+    background-color: #769c1f;
+  }
+
+  /* TESTIMONIAL */
+  .section-testimonial {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .testimonial:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .customer-group-2 .testimonial:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .customer-group-2 .testimonial:nth-child(even) {
+    flex-direction: row;
   }
 }
 
@@ -146,7 +198,4 @@
   }
 
   /* Bestsellers Section */
-  /* .section-bestsellers {
-    flex-direction: column;
-  } */
 }

@@ -299,13 +299,6 @@ body {
   border: none;
 }
 
-/* Bestseller Carousel for Mobile Widths */
-.bestseller-track {
-  display: flex;
-  /* gap: 2rem; */
-  overflow-x: visible;
-}
-
 /* Modal Overlay Styles for Fullsize Image Display */
 .modal-overlay {
   position: fixed;

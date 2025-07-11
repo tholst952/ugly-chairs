@@ -1,43 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { bestsellers } from "./bestsellers-data.js";
 
 // The Actual Component
 export default function BestsellersV2() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const trackRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleCardImgClick(imageSrc) {
     setSelectedImage(imageSrc);
   }
-
-  function scrollLeft() {
-    console.log("scrolling left, newb!!");
-    if (trackRef.current) {
-      trackRef.current.scrollBy({
-        left: -trackRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  function scrollRight() {
-    if (trackRef.current) {
-      trackRef.current.scrollBy({
-        left: trackRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="wrapper dkbg">
@@ -45,48 +16,53 @@ export default function BestsellersV2() {
         Bestsellers <i className="ph ph-smiley-wink"></i>
       </h2>
 
-      {isMobile && (
-        <div className="carousel-controls">
-          <button className="carousel-btn" onClick={scrollLeft}>
-            L
-          </button>
-          <button className="carousel-btn" onClick={scrollRight}>
-            R
-          </button>
-        </div>
-      )}
-
-      <section
-        className="section-bestsellers bestseller-track"
-        id="bestsellers"
-        ref={trackRef}
-      >
-        {bestsellers.map((chair) => (
-          <div className="chair-card" key={chair.id}>
-            <img
-              src={chair.image}
-              alt={chair.alt}
-              onClick={() => handleCardImgClick(chair.image)}
-            />
-            <div className="card-contents">
-              <h4 className="card-title">{chair.title}</h4>
-              <ul className="card-list">
-                {chair.features.map((feat, i) => (
-                  <li key={i}>
-                    {feat.icon}
-                    <span>{feat.label}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="chair-price">
-                <span>
-                  <strong>{chair.price}</strong>
-                </span>
-                <button className="btn--small">Add to cart</button>
+      <section className="section-bestsellers" id="bestsellers">
+        <div
+          className="slider-track"
+          style={{
+            width: `${bestsellers.length * 100}%`,
+            transform: `translateX(-${
+              currentSlide * (100 / bestsellers.length)
+            }%)`,
+          }}
+        >
+          {bestsellers.map((chair) => (
+            <div className="chair-card" key={chair.id}>
+              <img
+                src={chair.image}
+                alt={chair.alt}
+                onClick={() => handleCardImgClick(chair.image)}
+              />
+              <div className="card-contents">
+                <h4 className="card-title">{chair.title}</h4>
+                <ul className="card-list">
+                  {chair.features.map((feat, i) => (
+                    <li key={i}>
+                      {feat.icon}
+                      <span>{feat.label}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="chair-price">
+                  <span>
+                    <strong>{chair.price}</strong>
+                  </span>
+                  <button className="btn--small">Add to cart</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="slider-dots">
+          {bestsellers.map((__, index) => (
+            <button
+              key={index}
+              className={`dot ${index === currentSlide ? "active" : ""}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
       </section>
 
       {selectedImage && (
