@@ -1,10 +1,45 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { bestsellers } from "./bestsellers-data.js";
 
 // The Actual Component
 export default function BestsellersV2() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    function handleScroll() {
+      const scrollLeft = slider.scrollLeft;
+
+      const card = slider.querySelector(".chair-card");
+      const cardWidth = card?.offsetWidth || slider.offsetWidth;
+
+      const index = Math.round(slider.scrollLeft / cardWidth);
+      setCurrentSlide(index);
+    }
+
+    slider.addEventListener("scroll", handleScroll, { passive: true });
+    return () => slider.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  function goToSlide(index) {
+    setCurrentSlide(index);
+
+    const slider = sliderRef.current;
+    if (slider) {
+      const card = slider.querySelector(".chair-card");
+      const cardWidth = card?.offsetWidth || slider.offsetWidth;
+
+      slider.scrollTo({
+        left: index * cardWidth,
+        behavior: "smooth",
+      });
+    }
+  }
 
   function handleCardImgClick(imageSrc) {
     setSelectedImage(imageSrc);
@@ -19,6 +54,7 @@ export default function BestsellersV2() {
       <section className="section-bestsellers" id="bestsellers">
         <div
           className="slider-track"
+          ref={sliderRef}
           style={{
             width: `${bestsellers.length * 100}%`,
             transform: `translateX(-${
@@ -59,7 +95,7 @@ export default function BestsellersV2() {
             <button
               key={index}
               className={`dot ${index === currentSlide ? "active" : ""}`}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => goToSlide(index)}
             />
           ))}
         </div>
@@ -71,7 +107,7 @@ export default function BestsellersV2() {
             src={selectedImage}
             alt="chair enlarged"
             className="modal-image"
-            onClick={(e) => e.stopPropagation}
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
