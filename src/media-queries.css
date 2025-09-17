@@ -354,5 +354,39 @@
     line-height: 3.5rem;
   }
 
-  /* Bestsellers Section */
+  /* Our Chairs Section */
+  .our-chairs-subheadline {
+    font-size: 2.4rem;
+  }
+
+  .section-our-chairs {
+    padding: 2rem;
+  }
+
+  /* Our Customers Section */
+  .section-testimonial {
+    gap: 2rem;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    margin-bottom: 1.4rem;
+  }
+
+  .customer-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .testimonial:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .customer-group-2 .testimonial:nth-child(even),
+  .customer-group-2 .testimonial:nth-child(odd) {
+    flex-direction: column;
+  }
+  .customer-quote {
+    font-size: 2rem;
+  }
 }
