@@ -43,7 +43,7 @@ export default function CurrentStock() {
                   <span>
                     <strong>{chair.price}</strong>
                   </span>
-                  <button className="btn--small">Add to cart</button>
+                  <button className="btn--small">Ok</button>
                 </div>
               </div>
             </div>

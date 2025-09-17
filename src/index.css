@@ -27,7 +27,6 @@ html {
 body {
   font-family: "Roboto", "sans-serif";
   background-color: #dbcdbf;
-
   color: #333;
 }
 
@@ -35,7 +34,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  box-sizing: border-box;
 }
 
 /**********************************/
@@ -115,15 +113,15 @@ body {
 .nav-icon {
   width: 24px;
   height: 24px;
-  /* stroke: #dbcdbf; */
 }
 
 .nav-list button {
   cursor: pointer;
   background: #769c1f;
   color: #333;
+  font-weight: 600;
   border-radius: 22px;
-  padding: 0.2rem 2.4rem;
+  padding: 0.8rem 2.4rem;
   outline: none;
   border: none;
 }
@@ -140,7 +138,6 @@ body {
 }
 
 .nav-list a:hover {
-  /* text-decoration: underline dotted; */
   font-weight: 600;
 }
 
@@ -149,38 +146,31 @@ body {
 /**********************************/
 .section-home {
   /* margin: 8rem 0 12rem 0;  keep or remove? */
-  margin: 3rem 0rem;
+  margin: 6rem 0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 4.5rem;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .home-text {
-  /* padding: 1.2rem; */
-  padding: 2rem;
-  /* width: 100%; */
-  max-width: 600px;
-  flex: 1;
+  padding: 4rem;
+  flex: 1 0 20%;
 }
 
 .home-headline {
-  /* font-size: 8rem; */
-  font-size: clamp(3.6rem, 6vw, 8rem);
+  font-size: 6rem;
   letter-spacing: -1.4px;
-  /* line-height: 6.8rem; */
-  line-height: clamp(4.5rem, 5.7vw, 6.8rem);
+  line-height: 1;
   margin-bottom: 2rem;
 }
 
 .home-introduction {
-  /* font-size: 2.9rem; */
-  font-size: clamp(2rem, 2.5vw, 2.9rem);
+  font-size: 2.6rem;
   font-weight: 300;
-  /* line-height: 3.5rem; */
-  line-height: clamp(2.8rem, 3vw, 3.5rem);
+  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
@@ -189,9 +179,8 @@ body {
 }
 
 .home-img {
+  max-width: 450px;
   flex: 1;
-  max-width: 500px;
-  /* border: 8px solid #f7f6f5; */
   border: 8px solid #333;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
@@ -200,8 +189,8 @@ body {
 }
 
 .home-img img {
-  display: block;
   width: 100%;
+  display: block;
 }
 
 /**********************************/
@@ -210,9 +199,9 @@ body {
 .dkbg {
   background-color: #333;
   width: 100%;
-  /* margin-left: calc(-50vw + 50%); */
   box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.7),
     0 20px 40px -20px rgba(0, 0, 0, 0.7);
+  border-radius: 26px;
 }
 
 .bestsellers-inner {
@@ -413,8 +402,6 @@ body {
 }
 
 .stock-card-contents {
-  /* padding: 32px; */
-  /* padding: 2.2rem; */
   padding: 2.2rem 2.2rem 4rem 2.2rem;
 }
 
@@ -484,6 +471,7 @@ body {
   display: flex;
   gap: 8rem;
   padding: 6rem 4rem;
+  margin-bottom: 4rem;
 }
 
 .testimonial {
@@ -569,5 +557,11 @@ body {
 /* Footer Component */
 /**********************************/
 .footer {
-  padding: 8rem;
+  background-color: #333;
+  color: #dbcdbf;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
 }

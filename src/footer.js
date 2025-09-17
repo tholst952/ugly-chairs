@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className="wrapper dkbg">
+    <div className="wrapper">
       <section className="footer">
-        <p>Here is the footer, end of the page!</p>
+        <p>Copyright @2025 Ugly Chairs</p>
       </section>
     </div>
   );

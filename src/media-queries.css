@@ -3,13 +3,13 @@
 /* /////////////////////////////// */
 @media (max-width: 1199px) {
   body {
-    background-color: #dbcdbf;
+    background-color: #e2f10e;
   }
 
   /* Home Section */
   .section-home {
     gap: 6rem;
-    padding: 2rem 2rem 6rem 2rem;
+    padding: 2rem;
   }
 
   .home-text {
@@ -29,6 +29,10 @@
     flex-direction: row;
   }
 
+  .bestsellers-inner {
+    max-width: 800px;
+  }
+
   .slider-track {
     display: flex;
     flex-direction: row;
@@ -37,6 +41,28 @@
 
   .slider-dots {
     display: none;
+  }
+
+  .chair-card {
+    width: 280px;
+  }
+
+  /* Current Stock Section */
+  .carousel-window {
+    max-width: 980px;
+    gap: 4px;
+  }
+
+  .stock-card {
+    width: 280px;
+  }
+
+  .stock-card-contents {
+    padding: 2.8rem;
+  }
+
+  .stock-card-list {
+    font-size: 1.4rem;
   }
 }
 
@@ -48,21 +74,27 @@
     background-color: #99ecda;
   }
 
+  /* Nav Section */
+  .nav-list {
+    font-size: 1.6rem;
+  }
+
+  /* Home Section */
   .section-home {
     flex-direction: row;
     gap: 4.5rem;
   }
 
   .home-text {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .home-headline {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .home-introduction {
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 1.2;
   }
 
@@ -75,8 +107,77 @@
     flex-direction: row;
   }
 
+  .bestsellers-inner {
+    padding: 0 1rem 6rem 1rem;
+  }
+
+  .bestsellers-headline,
+  .stock-headline {
+    font-size: 4rem;
+  }
+
+  .slider-track {
+    gap: 2rem;
+  }
+
+  .chair-card {
+    width: 240px;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-list {
+    font-size: 1.4rem;
+  }
+
   .slider-dots {
     display: none;
+  }
+
+  /* Our Chairs Section */
+  .our-chairs-headline {
+    font-size: 4rem;
+  }
+
+  .our-chairs-subheadline {
+    font-size: 2.2rem;
+  }
+
+  /* Current Stock Section */
+  .carousel-window {
+    max-width: 804px;
+    gap: 2rem;
+  }
+
+  .stock-card {
+    width: 245px;
+  }
+
+  .stock-card-contents {
+    padding: 2rem;
+  }
+
+  .stock-card-title {
+    font-size: 1.8rem;
+  }
+
+  .stock-card-list {
+    font-size: 1.2rem;
+  }
+
+  .stock-btn button {
+    padding: 0.8rem 2.2rem;
+  }
+
+  /* Our Customers Section */
+  .our-customers-headline {
+    font-size: 4rem;
+  }
+
+  .customer-quote {
+    font-size: 1.6rem;
   }
 }
 
