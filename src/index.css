@@ -115,7 +115,7 @@ body {
   height: 24px;
 }
 
-.nav-list button {
+/* .nav-list button {
   cursor: pointer;
   background: #769c1f;
   color: #333;
@@ -124,7 +124,7 @@ body {
   padding: 0.8rem 2.4rem;
   outline: none;
   border: none;
-}
+} */
 
 .cart-icon {
   width: 24px;
@@ -139,6 +139,35 @@ body {
 
 .nav-list a:hover {
   font-weight: 600;
+}
+
+/******************************************/
+/* BUTTON FROM CSS BUTTON WEBSITE */
+.button-74 {
+  background-color: #769c1f;
+  border: 1px solid #333;
+  border-radius: 30px;
+  box-shadow: #333 4px 4px 0 0;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 0.8rem 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #dbcdbf;
+}
+
+.button-74:active {
+  box-shadow: #333 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
 /**********************************/
@@ -293,12 +322,12 @@ body {
 
 .btn--small {
   background-color: #769c1f;
-  color: #fff;
-  font-size: 16px;
+  /* color: #fff; */
+  /* font-size: 16px; */
   padding: 9px 27px;
   border-radius: 50px;
   cursor: pointer;
-  border: none;
+  /* border: none; */
 }
 
 /* Modal Overlay Styles for Fullsize Image Display */
