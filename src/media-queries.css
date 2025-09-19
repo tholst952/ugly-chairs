@@ -245,14 +245,14 @@
   }
 
   .slider-track {
-    max-width: 300px;
+    max-width: 360px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    /* transition: transform 0.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out;
   }
 
   .slider-track::-webkit-scrollbar {
@@ -261,11 +261,19 @@
 
   .chair-card {
     scroll-snap-align: center;
-    max-width: 300px;
+    width: 365px;
   }
 
   .chair-card:hover {
     transform: none;
+  }
+
+  .card-title {
+    font-size: 2.4rem;
+  }
+
+  .card-list {
+    font-size: 1.8rem;
   }
 
   .slider-dots {
@@ -319,9 +327,6 @@
 
   .customer-group-2 .testimonial:nth-child(even) {
     flex-direction: row;
-  }
-
-  .customer-img {
   }
 }
 
