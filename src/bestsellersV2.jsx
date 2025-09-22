@@ -65,11 +65,13 @@ export default function BestsellersV2() {
           >
             {bestsellers.map((chair) => (
               <div className="chair-card" key={chair.id}>
-                <img
-                  src={chair.image}
-                  alt={chair.alt}
-                  onClick={() => handleCardImgClick(chair.image)}
-                />
+                <div className="chair-img">
+                  <img
+                    src={chair.image}
+                    alt={chair.alt}
+                    onClick={() => handleCardImgClick(chair.image)}
+                  />
+                </div>
                 <div className="card-contents">
                   <h4 className="card-title">{chair.title}</h4>
                   <ul className="card-list">

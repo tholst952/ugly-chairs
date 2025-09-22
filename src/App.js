@@ -8,7 +8,7 @@ import Footer from "./footer.js";
 
 export default function App() {
   return (
-    <div>
+    <div className="page-container">
       <NavBar />
       <div className="main">
         <Home />

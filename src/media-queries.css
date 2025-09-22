@@ -196,11 +196,16 @@
 }
 
 /* /////////////////////////////// */
-/* SMALL - 📟 UNDER 768px */
+/* SMALL - 📟 UNDER 870px */
 /* /////////////////////////////// */
 @media (max-width: 870px) {
   body {
     background-color: #ae9bff;
+  }
+
+  /* NavBar */
+  .nav-list {
+    display: none;
   }
 
   /* Home Section */
@@ -245,8 +250,10 @@
   }
 
   .slider-track {
-    max-width: 360px;
+    max-width: 100%;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -260,23 +267,51 @@
   }
 
   .chair-card {
-    scroll-snap-align: center;
-    width: 365px;
+    /* scroll-snap-align: center; */
+    width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2rem; */
+    overflow: hidden;
   }
 
   .chair-card:hover {
     transform: none;
   }
 
+  .card-contents {
+    /* padding: 1.2rem; */
+  }
+
+  .chair-img {
+    width: 300px;
+    overflow: hidden;
+    border-bottom-left-radius: 32px;
+  }
+
+  .section-bestsellers .chair-img img {
+    border-top-right-radius: 0;
+  }
+
   .card-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .card-list {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 2.2;
+    /* padding: 1rem; */
   }
 
-  .slider-dots {
+  .card-list .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* .slider-dots {
     display: flex;
     gap: 2rem;
   }
@@ -291,7 +326,7 @@
 
   .slider-dots .dot.active {
     background-color: #769c1f;
-  }
+  } */
 
   /* Our Chairs Section */
   .our-chairs-subheadline {
@@ -357,6 +392,15 @@
   .home-introduction {
     font-size: 2.4rem;
     line-height: 3.5rem;
+  }
+
+  /* Bestsellers Section */
+  .slider-track {
+    max-width: 340px;
+  }
+
+  .chair-card {
+    width: 320px;
   }
 
   /* Our Chairs Section */
