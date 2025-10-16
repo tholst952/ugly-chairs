@@ -151,7 +151,7 @@ body {
 }
 
 /******************************************/
-/* BUTTON FROM CSS BUTTON WEBSITE */
+/* OK BUTTON FROM CSS BUTTON WEBSITE */
 .button-74 {
   background-color: #769c1f;
   border: 1px solid #333;
@@ -282,9 +282,9 @@ body {
 }
 
 .chair-card {
+  background-color: #faf9f6;
   width: 300px;
   flex: 0 0 auto;
-  background-color: #faf9f6;
   transition: transform 0.3s ease;
   transform-origin: top left;
   border-radius: 32px;
@@ -295,7 +295,10 @@ body {
 }
 
 .card-contents {
+  background-color: #faf9f6;
   padding: 2.2rem 2.2rem 4rem 2.2rem;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 
 .card-title {
@@ -307,7 +310,7 @@ body {
   list-style: none;
   font-size: 16px;
   line-height: 2.5;
-  margin-bottom: 18px;
+  margin-bottom: 1.8rem;
 }
 
 .card-list li {

@@ -2,7 +2,8 @@ import NavBar from "./navBar.js";
 import Home from "./home.jsx";
 import BestsellersV2 from "./bestsellersV2.jsx";
 import AboutOurChairs from "./about.jsx";
-import CurrentStock from "./currentStockV2.jsx";
+// import CurrentStock from "./currentStockV2.jsx";
+import CurrentStock from "./currentStockV3.jsx";
 import Testimonial from "./testimonial.js";
 import Footer from "./footer.js";
 
