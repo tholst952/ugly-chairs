@@ -105,7 +105,7 @@ export default function NavBar() {
             <a href="#our-customers">Our Customers {icons.users}</a>
           </li>
           <li>
-            <button class="button-74">OK</button>
+            <button className="button-74">OK</button>
           </li>
         </ul>
       </div>

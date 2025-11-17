@@ -18,8 +18,8 @@ export default function AboutOurChairs() {
     <div className="wrapper">
       <h2 className="our-chairs-headline">Our Chairs</h2>
       <section className="section-our-chairs" id="our-chairs">
-        {uglyChairFacts.map((fact) => (
-          <div className="our-chairs-fact">
+        {uglyChairFacts.map((fact, i) => (
+          <div className="our-chairs-fact" key={i}>
             <h3 className="our-chairs-subheadline">
               <i className="ph ph-arrow-bend-down-right"></i> {fact.subheadline}
             </h3>

@@ -93,14 +93,18 @@ export default function BestsellersV2() {
             ))}
           </div>
 
-          <div className="slider-dots">
-            {bestsellers.map((__, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentSlide ? "active" : ""}`}
-                onClick={() => goToSlide(index)}
-              />
-            ))}
+          <div className="stock-scroll-btns">
+            <div className="stock-btn">
+              <button className="stock-btn-left">
+                <i className="ph ph-caret-double-left"></i>
+              </button>
+            </div>
+
+            <div className=" stock-btn">
+              <button className="stock-btn-right">
+                <i className="ph ph-caret-double-right"></i>
+              </button>
+            </div>
           </div>
         </section>
 
