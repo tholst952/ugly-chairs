@@ -93,15 +93,15 @@ export default function BestsellersV2() {
             ))}
           </div>
 
-          <div className="stock-scroll-btns">
-            <div className="stock-btn">
-              <button className="stock-btn-left">
+          <div className="best-scroll-btns">
+            <div className="best-btn">
+              <button className="best-btn-left">
                 <i className="ph ph-caret-double-left"></i>
               </button>
             </div>
 
-            <div className=" stock-btn">
-              <button className="stock-btn-right">
+            <div className=" best-btn">
+              <button className="best-btn-right">
                 <i className="ph ph-caret-double-right"></i>
               </button>
             </div>

@@ -39,10 +39,6 @@
     gap: 4rem;
   }
 
-  .slider-dots {
-    display: none;
-  }
-
   .chair-card {
     width: 280px;
   }
@@ -270,6 +266,31 @@
 
   .slider-track::-webkit-scrollbar {
     display: none;
+  }
+
+  .best-scroll-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0 6rem 0;
+  }
+
+  .best-btn button {
+    padding: 1rem 4rem;
+    background-color: transparent;
+    border: 3px solid #dbcdbf;
+    color: #dbcdbf;
+    border-radius: 22px;
+  }
+
+  .best-btn-left,
+  .best-btn-right {
+    background-color: transparent;
+    color: #dbcdbf;
+  }
+
+  .best-btn button {
+    cursor: pointer;
   }
 
   .chair-card {
