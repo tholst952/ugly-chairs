@@ -263,7 +263,7 @@ body {
   gap: 4rem;
 }
 
-.slider-track {
+.baby-carousel {
   display: flex;
   flex-direction: row;
   justify-content: center;

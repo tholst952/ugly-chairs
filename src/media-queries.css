@@ -33,7 +33,7 @@
     max-width: 800px;
   }
 
-  .slider-track {
+  .baby-carousel {
     display: flex;
     flex-direction: row;
     gap: 4rem;
@@ -117,7 +117,7 @@
     font-size: 4rem;
   }
 
-  .slider-track {
+  .baby-carousel {
     gap: 2rem;
   }
 
@@ -250,7 +250,7 @@
     gap: 2rem;
   }
 
-  .slider-track {
+  .baby-carousel {
     /* max-width: 100%; */
     max-width: 423px;
     display: flex;
@@ -264,7 +264,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .slider-track::-webkit-scrollbar {
+  .baby-carousel::-webkit-scrollbar {
     display: none;
   }
 
@@ -287,6 +287,12 @@
   .best-btn-right {
     background-color: transparent;
     color: #dbcdbf;
+  }
+
+  .best-btn-left:hover,
+  .best-btn-right:hover {
+    background-color: #769c1f;
+    color: #333;
   }
 
   .best-btn button {
@@ -430,7 +436,7 @@
   }
 
   /* Bestsellers Section */
-  .slider-track {
+  .baby-carousel {
     max-width: 340px;
     /* flex-direction: row; */
   }

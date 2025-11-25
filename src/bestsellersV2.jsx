@@ -4,43 +4,32 @@ import { bestsellers } from "./bestsellers-data.js";
 // The Actual Component
 export default function BestsellersV2() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobileCarousel, setIsMobileCarousel] = useState(
+    window.innerWidth <= 870
+  );
 
-  const sliderRef = useRef(null);
-
+  //A Width Listener
   useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    function handleScroll() {
-      const scrollLeft = slider.scrollLeft;
-
-      const card = slider.querySelector(".chair-card");
-      const cardWidth = card?.offsetWidth || slider.offsetWidth;
-
-      const index = Math.round(slider.scrollLeft / cardWidth);
-      setCurrentSlide(index);
+    function handleResize() {
+      setIsMobileCarousel(window.innerWidth <= 870);
     }
 
-    slider.addEventListener("scroll", handleScroll, { passive: true });
-    return () => slider.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function goToSlide(index) {
-    setCurrentSlide(index);
+  const total = bestsellers.length;
 
-    const slider = sliderRef.current;
-    if (slider) {
-      const card = slider.querySelector(".chair-card");
-      const cardWidth = card?.offsetWidth || slider.offsetWidth;
-
-      slider.scrollTo({
-        left: index * cardWidth,
-        behavior: "smooth",
-      });
-    }
+  function handleLeft() {
+    setCurrentIndex((prev) => (prev - 1 + total) % total);
   }
 
+  function handleRight() {
+    setCurrentIndex((prev) => (prev + 1) % total);
+  }
+
+  // Function to make imgs larger on click
   function handleCardImgClick(imageSrc) {
     setSelectedImage(imageSrc);
   }
@@ -53,59 +42,38 @@ export default function BestsellersV2() {
         </h2>
 
         <section className="section-bestsellers" id="bestsellers">
-          <div
-            className="slider-track"
-            ref={sliderRef}
-            style={{
-              width: `${bestsellers.length * 100}%`,
-              transform: `translateX(-${
-                currentSlide * (100 / bestsellers.length)
-              }%)`,
-            }}
-          >
-            {bestsellers.map((chair) => (
-              <div className="chair-card" key={chair.id}>
-                <div className="chair-img">
-                  <img
-                    src={chair.image}
-                    alt={chair.alt}
-                    onClick={() => handleCardImgClick(chair.image)}
-                  />
-                </div>
-                <div className="card-contents">
-                  <h4 className="card-title">{chair.title}</h4>
-                  <ul className="card-list">
-                    {chair.features.map((feat, i) => (
-                      <li key={i}>
-                        {feat.icon}
-                        <span>{feat.label}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="chair-price">
-                    <span>
-                      <strong>{chair.price}</strong>
-                    </span>
-                    <button className="btn--small button-74">Ok</button>
-                  </div>
-                </div>
+          <div className="baby-carousel">
+            {isMobileCarousel ? (
+              <SingleCard
+                chair={bestsellers[currentIndex]}
+                onClick={handleCardImgClick}
+              />
+            ) : (
+              bestsellers.map((chair) => (
+                <SingleCard
+                  key={chair.id}
+                  chair={chair}
+                  onClick={handleCardImgClick}
+                />
+              ))
+            )}
+          </div>
+
+          {isMobileCarousel && (
+            <div className="best-scroll-btns">
+              <div className="best-btn">
+                <button className="best-btn-left" onClick={handleLeft}>
+                  <i className="ph ph-caret-double-left"></i>
+                </button>
               </div>
-            ))}
-          </div>
 
-          <div className="best-scroll-btns">
-            <div className="best-btn">
-              <button className="best-btn-left">
-                <i className="ph ph-caret-double-left"></i>
-              </button>
+              <div className=" best-btn">
+                <button className="best-btn-right" onClick={handleRight}>
+                  <i className="ph ph-caret-double-right"></i>
+                </button>
+              </div>
             </div>
-
-            <div className=" best-btn">
-              <button className="best-btn-right">
-                <i className="ph ph-caret-double-right"></i>
-              </button>
-            </div>
-          </div>
+          )}
         </section>
 
         {selectedImage && (
@@ -122,3 +90,64 @@ export default function BestsellersV2() {
     </div>
   );
 }
+
+function SingleCard({ chair, onClick }) {
+  return (
+    <div className="chair-card">
+      <div className="chair-img">
+        <img
+          src={chair.image}
+          alt={chair.alt}
+          onClick={() => onClick(chair.image)}
+        />
+      </div>
+      <div className="card-contents">
+        <h4 className="card-title">{chair.title}</h4>
+        <ul className="card-list">
+          {chair.features.map((feat, i) => (
+            <li key={i}>
+              {feat.icon}
+              <span>{feat.label}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="chair-price">
+          <span>
+            <strong>{chair.price}</strong>
+          </span>
+          <button className="btn--small button-74">Ok</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// copy pasta
+// {bestsellers.map((chair) => (
+//               <div className="chair-card" key={chair.id}>
+//                 <div className="chair-img">
+//                   <img
+//                     src={chair.image}
+//                     alt={chair.alt}
+//                     onClick={() => handleCardImgClick(chair.image)}
+//                   />
+//                 </div>
+//                 <div className="card-contents">
+//                   <h4 className="card-title">{chair.title}</h4>
+//                   <ul className="card-list">
+//                     {chair.features.map((feat, i) => (
+//                       <li key={i}>
+//                         {feat.icon}
+//                         <span>{feat.label}</span>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                   <div className="chair-price">
+//                     <span>
+//                       <strong>{chair.price}</strong>
+//                     </span>
+//                     <button className="btn--small button-74">Ok</button>
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
