@@ -187,4 +187,17 @@ export const currentStock = [
       { icon: icons.weightScale, label: "Approx 0.0275 Tonnage" },
     ],
   },
+  {
+    id: 1,
+    image: "./img/stock-13.jpg",
+    title: "The Big Repeat",
+    alt: "two tears in bucket",
+    price: "$20",
+    features: [
+      { icon: icons.sun, label: "whatever you want" },
+      { icon: icons.comfortableForDays, label: "a few minutes" },
+      { icon: icons.foldedMap, label: "the same thing again" },
+      { icon: icons.weightScale, label: "80kg" },
+    ],
+  },
 ];
