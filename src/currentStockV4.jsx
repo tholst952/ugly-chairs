@@ -18,6 +18,8 @@ export default function CurrentStock() {
 
   const totalChairs = currentStock.length;
   const cardsPerView = isMobileCarousel ? 1 : 3;
+  const totalSegments = Math.ceil(totalChairs / cardsPerView);
+  const currentSegment = Math.floor(currentIndex / cardsPerView);
 
   function handleLeft() {
     setCurrentIndex((prev) => {
@@ -78,6 +80,15 @@ export default function CurrentStock() {
           <button className="stock-btn-left" onClick={handleLeft}>
             <i className="ph ph-caret-double-left"></i>
           </button>
+        </div>
+
+        <div className="stock-progress-bar">
+          <div
+            className="stock-progress-fill"
+            style={{
+              width: `${((currentSegment + 1) / totalSegments) * 100}%`,
+            }}
+          ></div>
         </div>
 
         <div className="stock-btn">
