@@ -302,11 +302,11 @@
   .chair-card {
     /* scroll-snap-align: center; */
     /* width: 415px; */
-    width: 391px;
+    width: 380px;
     /* height: 280px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     gap: 2rem;
     overflow: hidden;
@@ -318,9 +318,10 @@
   }
 
   .card-contents {
-    flex: 1;
+    /* flex: 1; */
     border-radius: 32px;
     padding: 1rem 2rem 4rem 2rem;
+    margin: 0 2rem;
   }
 
   .chair-img {
@@ -336,8 +337,8 @@
   }
 
   .card-title {
-    font-size: 2.9rem;
-    text-align: center;
+    font-size: 2.8rem;
+    /* text-align: center; */
   }
 
   .card-list {
@@ -377,6 +378,33 @@
 
   .our-chairs-text {
     font-size: 2rem;
+  }
+
+  /* CURRENT STOCK */
+  .carousel-window {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stock-card {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;
+  }
+
+  .stock-card-contents {
+    padding: 1rem 2rem 4rem 2rem;
+    margin: 0 2rem;
+  }
+
+  .stock-card-title {
+    font-size: 2.8rem;
+  }
+
+  .stock-card-list {
+    font-size: 1.8rem;
   }
 
   /* TESTIMONIAL */
