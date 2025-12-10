@@ -209,6 +209,14 @@
     display: none;
   }
 
+  /* BASIC */
+  .bestsellers-headline,
+  .our-chairs-headline,
+  .stock-headline,
+  .our-customers-headline {
+    font-size: 5.8rem;
+  }
+
   /* Home Section */
   .section-home {
     flex-direction: column;
@@ -272,11 +280,10 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    padding: 1rem 0 6rem 0;
   }
 
   .best-btn button {
-    padding: 1rem 4rem;
+    padding: 0.8rem 2.2rem;
     background-color: transparent;
     border: 3px solid #dbcdbf;
     color: #dbcdbf;
@@ -372,12 +379,12 @@
 
   /* Our Chairs Section */
   .our-chairs-subheadline {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
   }
 
   .our-chairs-text {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   /* CURRENT STOCK */
