@@ -15,20 +15,21 @@ export default function NavBar() {
   return (
     <nav className="nav-bar">
       <Logo />
-      {isMobile ? (
-        isModalOpen ? (
-          <>
-            <div
-              className="modal-overlay"
-              onClick={() => setIsModalOpen(false)}
-            />
-            <NavListModal onClose={() => setIsModalOpen(false)} />
-          </>
-        ) : (
-          <NavListBtn onClick={() => setIsModalOpen(true)} />
-        )
-      ) : (
-        <NavList />
+
+      {!isMobile && <NavList />}
+
+      {isMobile && !isModalOpen && (
+        <NavListBtn onClick={() => setIsModalOpen(true)} />
+      )}
+
+      {isMobile && isModalOpen && (
+        <>
+          <div
+            className="modal-overlay"
+            onClick={() => setIsModalOpen(false)}
+          />
+          <NavListModal onClose={() => setIsModalOpen(false)} />
+        </>
       )}
     </nav>
   );
@@ -78,11 +79,23 @@ export default function NavBar() {
   function NavListModal({ onClose }) {
     return (
       <div className="nav-list-modal">
+        <button className="modal-close-btn" onClick={onClose}>
+          x
+        </button>
+
         <ul className="modal-list">
-          <li>Bestsellers</li>
-          <li>Our Chairs</li>
-          <li>Current Stock</li>
-          <li>Our Customers</li>
+          <li>
+            <a href="#bestsellers">Bestsellers {icons.trophy}</a>
+          </li>
+          <li>
+            <a href="#our-chairs">Our Chairs {icons.documentCheck}</a>
+          </li>
+          <li>
+            <a href="#current-stock">Current Stock {icons.stackedRectangles}</a>
+          </li>
+          <li>
+            <a href="#our-customers">Our Customers {icons.users}</a>
+          </li>
         </ul>
       </div>
     );
