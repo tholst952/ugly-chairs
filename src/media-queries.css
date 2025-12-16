@@ -54,10 +54,6 @@
     width: 280px;
   }
 
-  .stock-card img {
-    min-height: 350px;
-  }
-
   .stock-card-contents {
     padding: 2.6rem;
   }
@@ -343,11 +339,6 @@
     overflow: hidden;
 
     /* border-bottom-left-radius: 32px; */
-  }
-
-  .section-bestsellers .chair-img img {
-    /* border-radius: 32px; */
-    /* border-top-right-radius: 0; */
   }
 
   .card-title {

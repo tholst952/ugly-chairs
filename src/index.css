@@ -582,7 +582,8 @@ body {
 }
 
 .stock-btn button {
-  padding: 1rem 4rem;
+  /* padding: 1rem 4rem; */
+  padding: 0.8rem 2.2rem;
   background-color: transparent;
   border: 3px solid #dbcdbf;
   color: #dbcdbf;
