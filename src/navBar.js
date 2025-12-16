@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { icons } from "./icons.js";
 
-export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
+export default function NavBar({ onCrateNavClick, crateCount, onCrateClose }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 870);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -16,12 +16,14 @@ export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
     <nav className="nav-bar">
       <Logo />
 
-      {!isMobile && <NavList onOkNavClick={onOkNavClick} okCount={okCount} />}
+      {!isMobile && (
+        <NavList onCrateNavClick={onCrateNavClick} crateCount={crateCount} />
+      )}
 
       {isMobile && (
         <div className="mobile-top-buttons">
-          <button className="button-74" onClick={onOkNavClick}>
-            Seriously {okCount > 0 && `(${okCount})`}
+          <button className="button-74" onClick={onCrateNavClick}>
+            My Crate {crateCount > 0 && `(${crateCount})`}
           </button>
           <NavListBtn onClick={() => setIsModalOpen(true)} />
         </div>
@@ -34,9 +36,9 @@ export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
             onClick={() => setIsModalOpen(false)}
           />
           <NavListModal
-            onClose={onOkModalClose}
-            onOkNavClick={onOkNavClick}
-            okCount={okCount}
+            onClose={onCrateClose}
+            onCrateNavClick={onCrateNavClick}
+            crateCount={crateCount}
           />
         </>
       )}
@@ -110,7 +112,7 @@ export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
     );
   }
 
-  function NavList({ onOkNavClick, okCount }) {
+  function NavList({ onCrateNavClick, crateCount }) {
     return (
       <div>
         <ul className="nav-list">
@@ -127,8 +129,8 @@ export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
             <a href="#our-customers">Our Customers {icons.users}</a>
           </li>
           <li>
-            <button className="button-74" onClick={onOkNavClick}>
-              Seriously {okCount > 0 && `(${okCount})`}
+            <button className="button-74" onClick={onCrateNavClick}>
+              My Crate {crateCount > 0 && `(${crateCount})`}
             </button>
           </li>
         </ul>

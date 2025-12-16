@@ -1,4 +1,4 @@
-const okMessages = [
+const crateMessages = [
   "There is a waiting period of 2 years.",
   "This chair is unavailable in your area.",
   "Please contact customer support to purchase.",
@@ -86,8 +86,8 @@ const okMessages = [
   "Your order has not been recieved.",
 ];
 
-export function getRandomOkMessage() {
-  return okMessages[Math.floor(Math.random() * okMessages.length)];
+export function getRandomCrateMessage() {
+  return crateMessages[Math.floor(Math.random() * crateMessages.length)];
 }
 
-export default okMessages;
+export default crateMessages;

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { bestsellers } from "./bestsellers-data.js";
 
 // The Actual Component
-export default function BestsellersV2({ onOkClick }) {
+export default function BestsellersV2({ onAddClick, crate }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileCarousel, setIsMobileCarousel] = useState(
@@ -47,7 +47,7 @@ export default function BestsellersV2({ onOkClick }) {
               <SingleCard
                 chair={bestsellers[currentIndex]}
                 onClick={handleCardImgClick}
-                onOkClick={() => onOkClick(bestsellers[currentIndex])}
+                onAddClick={() => onAddClick(bestsellers[currentIndex])}
               />
             ) : (
               bestsellers.map((chair) => (
@@ -55,7 +55,7 @@ export default function BestsellersV2({ onOkClick }) {
                   key={chair.id}
                   chair={chair}
                   onClick={handleCardImgClick}
-                  onOkClick={() => onOkClick(chair)}
+                  onAddClick={() => onAddClick(chair)}
                 />
               ))
             )}
@@ -93,7 +93,7 @@ export default function BestsellersV2({ onOkClick }) {
   );
 }
 
-function SingleCard({ chair, onClick, onOkClick }) {
+function SingleCard({ chair, onClick, onAddClick }) {
   return (
     <div className="chair-card">
       <div className="chair-img">
@@ -117,8 +117,8 @@ function SingleCard({ chair, onClick, onOkClick }) {
           <span>
             <strong>{chair.price}</strong>
           </span>
-          <button className="btn--small button-74" onClick={onOkClick}>
-            Ok
+          <button className="btn--small button-74" onClick={onAddClick}>
+            Add
           </button>
         </div>
       </div>

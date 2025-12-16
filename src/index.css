@@ -9,6 +9,8 @@
 /* Testimonials #c3cc9c#b3cecd#8e9abe#d3d4ea#caa1ba#c4d5d8 */
 /* Query Colors Used For Testing #99ecda */
 
+/* dark reader inspired font color #c8c3bc */
+
 /**********************************/
 /* Basics */
 /**********************************/
@@ -218,9 +220,9 @@ body {
 }
 
 /**********************************/
-/* OkModal Component */
+/* CrateModal Component */
 /**********************************/
-.ok-modal {
+.crate-modal {
   position: fixed;
   top: 20%;
   left: 50%;
@@ -235,20 +237,20 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.ok-modal ul {
+.crate-modal ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.ok-modal li {
+.crate-modal li {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.ok-modal img {
+.crate-modal img {
   width: 60px;
   height: auto;
   border-radius: 0.25rem;
@@ -510,7 +512,7 @@ body {
 
 .stock-card img {
   width: 100%;
-  height: 350px;
+  min-height: 286px;
   display: block;
   cursor: pointer;
   border-top-left-radius: 32px;

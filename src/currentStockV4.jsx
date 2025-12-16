@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { currentStock } from "./stock-data.js";
 
-export default function CurrentStock({ onOkClick }) {
+export default function CurrentStock({ onAddClick, crate }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileCarousel, setIsMobileCarousel] = useState(
     window.innerWidth <= 870
@@ -45,38 +45,46 @@ export default function CurrentStock({ onOkClick }) {
 
       <section className="section-current-stock" id="current-stock">
         <div className="carousel-window">
-          {visibleChairs.map((chair) => (
-            <div className="stock-card" key={chair.id}>
-              <div className="stock-img">
-                <img src={chair.image} alt={chair.alt} />
-              </div>
+          {visibleChairs.map((chair) => {
+            const isInCrate = crate.some((item) => item.id === chair.id);
 
-              <div className="stock-card-contents">
-                <h4 className="stock-card-title">{chair.title}</h4>
+            return (
+              <div className="stock-card" key={chair.id}>
+                <div className="stock-img">
+                  <img src={chair.image} alt={chair.alt} />
+                </div>
 
-                <ul className="stock-card-list">
-                  {chair.features.map((feat, i) => (
-                    <li key={i}>
-                      {feat.icon}
-                      <span>{feat.label}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="stock-card-contents">
+                  <h4 className="stock-card-title">{chair.title}</h4>
 
-                <div className="chair-price">
-                  <span>
-                    <strong>{chair.price}</strong>
-                  </span>
-                  <button
-                    className="btn--small button-74"
-                    onClick={() => onOkClick(chair)}
-                  >
-                    Ok
-                  </button>
+                  <ul className="stock-card-list">
+                    {chair.features.map((feat, i) => (
+                      <li key={i}>
+                        {feat.icon}
+                        <span>{feat.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="chair-price">
+                    <span>
+                      <strong>{chair.price}</strong>
+                    </span>
+
+                    <button
+                      className={`btn--small button-74 ${
+                        isInCrate ? "added" : ""
+                      }`}
+                      onClick={() => onAddClick(chair)}
+                      disabled={isInCrate}
+                    >
+                      {isInCrate ? "Added ✓" : "Add"}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

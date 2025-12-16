@@ -1,52 +1,56 @@
 import { useState } from "react";
 import NavBar from "./navBar.js";
 import Home from "./home.jsx";
-import OkModal from "./OkModal.jsx";
-import { getRandomOkMessage } from "./ok-messages.js";
+import CrateModal from "./crateModal.jsx";
+import { getRandomCrateMessage } from "./crate-messages.js";
 import BestsellersV2 from "./bestsellersV2.jsx";
 import AboutOurChairs from "./about.jsx";
-// import CurrentStock from "./currentStockV2.jsx";
-// import CurrentStock from "./currentStockV3.jsx";
 import CurrentStock from "./currentStockV4.jsx";
 import Testimonial from "./testimonial.js";
 import Footer from "./footer.js";
 
 export default function App() {
-  const [okList, setOkList] = useState([]);
-  const [isOkModalOpen, setIsOkModalOpen] = useState(false);
+  const [crate, setCrate] = useState([]);
+  const [isCrateOpen, setIsCrateOpen] = useState(false);
 
-  function handleOkClick(chair) {
-    setOkList((prev) => [
-      ...prev,
-      {
-        ...chair,
-        message: getRandomOkMessage(),
-      },
-    ]);
+  function addToCrate(chair) {
+    setCrate((prev) => {
+      const alreadyInCrate = prev.some((item) => item.id === chair.id);
+
+      if (alreadyInCrate) return prev;
+
+      return [
+        ...prev,
+        {
+          ...chair,
+          message: getRandomCrateMessage(),
+        },
+      ];
+    });
   }
 
-  function clearOkList() {
-    setOkList([]);
-    setIsOkModalOpen(false);
+  function clearCrate() {
+    setCrate([]);
+    setIsCrateOpen(false);
   }
 
   return (
     <div className="page-container">
       <NavBar
-        onOkNavClick={() => setIsOkModalOpen(true)}
-        okCount={okList.length}
-        onOkModalClose={clearOkList}
+        onCrateNavClick={() => setIsCrateOpen(true)}
+        crateCount={crate.length}
+        onCrateClose={clearCrate}
       />
       <div className="main">
         <Home />
-        <BestsellersV2 onOkClick={handleOkClick} />
+        <BestsellersV2 onAddClick={addToCrate} crate={crate} />
         <AboutOurChairs />
-        <CurrentStock onOkClick={handleOkClick} />
+        <CurrentStock onAddClick={addToCrate} crate={crate} />
         <Testimonial />
         <Footer />
       </div>
 
-      {isOkModalOpen && <OkModal okList={okList} onClose={clearOkList} />}
+      {isCrateOpen && <CrateModal crate={crate} onClose={clearCrate} />}
     </div>
   );
 }

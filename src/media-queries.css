@@ -54,6 +54,10 @@
     width: 280px;
   }
 
+  .stock-card img {
+    min-height: 350px;
+  }
+
   .stock-card-contents {
     padding: 2.6rem;
   }
@@ -68,7 +72,10 @@
 /* /////////////////////////////// */
 @media (max-width: 1023px) {
   body {
-    background-color: #99ecda;
+    /* background-color: #99ecda; */
+    /* background-color: #13685a; */
+    background-color: hsl(170, 68%, 38%);
+    /* color: hsl(35, 10%, 76%); */
   }
 
   /* Nav Section */
