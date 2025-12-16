@@ -46,6 +46,7 @@ export default function BestsellersV2({ onAddClick, crate }) {
             {isMobileCarousel ? (
               <SingleCard
                 chair={bestsellers[currentIndex]}
+                crate={crate}
                 onClick={handleCardImgClick}
                 onAddClick={() => onAddClick(bestsellers[currentIndex])}
               />
@@ -54,6 +55,7 @@ export default function BestsellersV2({ onAddClick, crate }) {
                 <SingleCard
                   key={chair.id}
                   chair={chair}
+                  crate={crate}
                   onClick={handleCardImgClick}
                   onAddClick={() => onAddClick(chair)}
                 />
@@ -93,7 +95,9 @@ export default function BestsellersV2({ onAddClick, crate }) {
   );
 }
 
-function SingleCard({ chair, onClick, onAddClick }) {
+function SingleCard({ chair, crate, onClick, onAddClick }) {
+  const isInCrate = crate.some((item) => item.id === chair.id);
+
   return (
     <div className="chair-card">
       <div className="chair-img">
@@ -117,41 +121,16 @@ function SingleCard({ chair, onClick, onAddClick }) {
           <span>
             <strong>{chair.price}</strong>
           </span>
-          <button className="btn--small button-74" onClick={onAddClick}>
-            Add
+
+          <button
+            className={`btn--small button-74 ${isInCrate ? "added" : ""}`}
+            onClick={onAddClick}
+            disabled={isInCrate}
+          >
+            {isInCrate ? "Added ✓" : "Add"}
           </button>
         </div>
       </div>
     </div>
   );
 }
-
-// copy pasta
-// {bestsellers.map((chair) => (
-//               <div className="chair-card" key={chair.id}>
-//                 <div className="chair-img">
-//                   <img
-//                     src={chair.image}
-//                     alt={chair.alt}
-//                     onClick={() => handleCardImgClick(chair.image)}
-//                   />
-//                 </div>
-//                 <div className="card-contents">
-//                   <h4 className="card-title">{chair.title}</h4>
-//                   <ul className="card-list">
-//                     {chair.features.map((feat, i) => (
-//                       <li key={i}>
-//                         {feat.icon}
-//                         <span>{feat.label}</span>
-//                       </li>
-//                     ))}
-//                   </ul>
-//                   <div className="chair-price">
-//                     <span>
-//                       <strong>{chair.price}</strong>
-//                     </span>
-//                     <button className="btn--small button-74">Ok</button>
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}

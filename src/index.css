@@ -256,6 +256,30 @@ body {
   border-radius: 0.25rem;
 }
 
+/* Added Class for Add to crate buttons */
+/* pulse animation on adding to crate */
+@keyframes addPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(118, 156, 31, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(118, 156, 31, 0);
+  }
+}
+
+.button-74.added {
+  animation: addPulse 0.35s ease-out;
+  background-color: #769c1f;
+  color: #f3f6e8;
+  cursor: default;
+  opacity: 0.65;
+}
+
+.button-74:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /**********************************/
 /* Home Component */
 /**********************************/
