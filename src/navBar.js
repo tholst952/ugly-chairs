@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { icons } from "./icons.js";
 
-export default function NavBar() {
+export default function NavBar({ onOkNavClick, okCount, onOkModalClose }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 870);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -16,10 +16,15 @@ export default function NavBar() {
     <nav className="nav-bar">
       <Logo />
 
-      {!isMobile && <NavList />}
+      {!isMobile && <NavList onOkNavClick={onOkNavClick} okCount={okCount} />}
 
-      {isMobile && !isModalOpen && (
-        <NavListBtn onClick={() => setIsModalOpen(true)} />
+      {isMobile && (
+        <div className="mobile-top-buttons">
+          <button className="button-74" onClick={onOkNavClick}>
+            Seriously {okCount > 0 && `(${okCount})`}
+          </button>
+          <NavListBtn onClick={() => setIsModalOpen(true)} />
+        </div>
       )}
 
       {isMobile && isModalOpen && (
@@ -28,7 +33,11 @@ export default function NavBar() {
             className="modal-overlay"
             onClick={() => setIsModalOpen(false)}
           />
-          <NavListModal onClose={() => setIsModalOpen(false)} />
+          <NavListModal
+            onClose={onOkModalClose}
+            onOkNavClick={onOkNavClick}
+            okCount={okCount}
+          />
         </>
       )}
     </nav>
@@ -101,7 +110,7 @@ export default function NavBar() {
     );
   }
 
-  function NavList() {
+  function NavList({ onOkNavClick, okCount }) {
     return (
       <div>
         <ul className="nav-list">
@@ -118,7 +127,9 @@ export default function NavBar() {
             <a href="#our-customers">Our Customers {icons.users}</a>
           </li>
           <li>
-            <button className="button-74">OK</button>
+            <button className="button-74" onClick={onOkNavClick}>
+              Seriously {okCount > 0 && `(${okCount})`}
+            </button>
           </li>
         </ul>
       </div>

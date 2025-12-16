@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { bestsellers } from "./bestsellers-data.js";
 
 // The Actual Component
-export default function BestsellersV2() {
+export default function BestsellersV2({ onOkClick }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileCarousel, setIsMobileCarousel] = useState(
@@ -47,6 +47,7 @@ export default function BestsellersV2() {
               <SingleCard
                 chair={bestsellers[currentIndex]}
                 onClick={handleCardImgClick}
+                onOkClick={() => onOkClick(bestsellers[currentIndex])}
               />
             ) : (
               bestsellers.map((chair) => (
@@ -54,6 +55,7 @@ export default function BestsellersV2() {
                   key={chair.id}
                   chair={chair}
                   onClick={handleCardImgClick}
+                  onOkClick={() => onOkClick(chair)}
                 />
               ))
             )}
@@ -91,7 +93,7 @@ export default function BestsellersV2() {
   );
 }
 
-function SingleCard({ chair, onClick }) {
+function SingleCard({ chair, onClick, onOkClick }) {
   return (
     <div className="chair-card">
       <div className="chair-img">
@@ -115,7 +117,9 @@ function SingleCard({ chair, onClick }) {
           <span>
             <strong>{chair.price}</strong>
           </span>
-          <button className="btn--small button-74">Ok</button>
+          <button className="btn--small button-74" onClick={onOkClick}>
+            Ok
+          </button>
         </div>
       </div>
     </div>

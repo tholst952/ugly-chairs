@@ -210,6 +210,50 @@ body {
   transform: translate(2px, 2px);
 }
 
+.mobile-top-buttons {
+  display: flex;
+  gap: 1.5rem; /* space between buttons */
+  margin-left: auto; /* push buttons to the right of the logo */
+  align-items: center;
+}
+
+/**********************************/
+/* OkModal Component */
+/**********************************/
+.ok-modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #dbcdbf;
+  padding: 2rem;
+  border-radius: 1rem;
+  z-index: 999;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.ok-modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ok-modal li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ok-modal img {
+  width: 60px;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
 /**********************************/
 /* Home Component */
 /**********************************/

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { currentStock } from "./stock-data.js";
 
-export default function CurrentStock() {
+export default function CurrentStock({ onOkClick }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileCarousel, setIsMobileCarousel] = useState(
     window.innerWidth <= 870
@@ -67,7 +67,12 @@ export default function CurrentStock() {
                   <span>
                     <strong>{chair.price}</strong>
                   </span>
-                  <button className="btn--small button-74">Ok</button>
+                  <button
+                    className="btn--small button-74"
+                    onClick={() => onOkClick(chair)}
+                  >
+                    Ok
+                  </button>
                 </div>
               </div>
             </div>
